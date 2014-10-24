@@ -1,0 +1,2 @@
+Align.vba: call delete('/Users/jenan/.vim/plugin/AlignPlugin.vim')|call delete('/Users/jenan/.vim/plugin/AlignMapsPlugin.vim')|call delete('/Users/jenan/.vim/plugin/cecutil.vim')|call delete('/Users/jenan/.vim/doc/Align.txt')|call delete('/Users/jenan/.vim/autoload/Align.vim')|call delete('/Users/jenan/.vim/autoload/AlignMaps.vim')
+vimperator.vba: call delete('/Users/jenan/.vim/syntax/vimperator.vim')|call delete('/Users/jenan/.vim/ftdetect/vimperator.vim')

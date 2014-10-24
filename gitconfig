@@ -1,0 +1,49 @@
+[alias]
+  a = add
+  aa = add -A
+  b = branch
+  c = checkout
+  cb = checkout -b
+  cm = commit -m
+  d = diff
+  dt = difftool
+  l = log --pretty=colored-oneline --date=short
+  m = merge
+  mt = mergetool
+  p = pull
+  pr = pull --rebase
+  r = rebase
+  ra = rebase --abort
+  rc = rebase --continue
+  s = status
+[color]
+  ui = true
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+[include]
+  path = ~/.gitconfig.local
+[merge]
+  ff = only
+  tool = fugitive
+[mergetool "fugitive"]
+  cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+[pull]
+  ff = only
+[push]
+  default = simple
+[pretty]
+  colored-oneline = format:%C(magenta)%h  %C(green)%cd  %C(reset)%C(blue)%an%C(auto)%d%Creset %s
+[difftool]
+  prompt = false
+[user]
+	email = vvveleva@gmail.com
+	name = Velina V Veleva
+[mergetool]
+	keepBackup = false
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[credential]
+	helper = osxkeychain

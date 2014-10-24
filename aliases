@@ -1,0 +1,42 @@
+alias terminal_colors='for x in 0 1 4 5 7 8; do for i in `seq 30 37`; do for a in `seq 40 47`; do echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "; done; echo; done; done; echo "";'
+
+alias ...='cd ../..'
+alias a='atom'
+alias ack='ack --group --color'
+alias b='bundle'
+alias be='bundle exec'
+alias brspec="bin/rspec"
+alias bu='bundle update'
+alias cms='bundle exec rake db:create db:migrate db:seed'
+alias e="$EDITOR"
+alias grep='grep --color'
+alias gtypist="gtypist -wSstb --banner-colors=0,0,5,4 --color=2,0"
+alias ipy='ipython'
+alias ls='ls -FGha'
+alias l='ls'
+alias less='LESSOPEN="|pygmentize -g %s" less -R'
+alias ll='ls -alrth'
+alias rpry='bundle exec pry-remote'
+alias sl='sl -aFlc'
+alias tree='tree -C'
+alias v='vim'
+alias vi='vim'
+alias devserver='ssh -i ~/.ssh/enjoy_dev_key.pem ec2-user@bulbasaur.enjoytechnology.com'
+
+# git
+alias unwip='glog=`git log -1 --pretty=%B`; if [[ $glog == "wip" ]]; then g reset HEAD^; else echo "last commit is not wip"; fi'
+alias wip='git add -A; git commit -m wip'
+
+alias locate='mdfind -name'
+alias jumpstat="autojump --stat"
+alias snippets="cd ~/.vim/bundle/vim-snippets/snippets"
+alias path="echo $PATH | tr -s ':' '\n'"
+
+if [[ -x `which nc` ]]; then
+  alias nyan='nc -v nyancat.dakko.us 23' # nyan cat
+fi
+
+gcb() { git checkout -b "$@"; }
+fpg() { find | grep "$@"; }
+
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local

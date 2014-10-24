@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/Lina'
+let g:netrw_dirhist_2='/Users/velina/appacademy/appacademy/w4/w4d1/routes_app/test'
+let g:netrw_dirhist_3='/Users/velina/aa_projects/TrelloClone/config'

@@ -1,0 +1,30 @@
+# OS X
+.DS_Store
+*/.DS_Store
+ssh/
+.ssh/
+
+# Windows
+Thumbs.db
+
+# Vim
+*.sw[nop]
+
+# Rails
+db/*.sqlite3
+log/
+log/*.log
+tmp/**/*
+!tmp/cache/.keep
+.sass-cache
+
+# Other
+mutt/
+.mutt/
+.svn
+*.local
+.bundle
+.env
+vim/bundle/*
+.vim/bundle/*
+

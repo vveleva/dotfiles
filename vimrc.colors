@@ -1,0 +1,20 @@
+" Color scheme
+" colorscheme velina
+colorscheme solarized
+set background=dark
+
+" custom colors
+hi Normal ctermbg=none
+
+
+hi ColorColumn ctermbg=black
+hi CursorColumn ctermbg=0
+hi CursorLine ctermbg=black cterm=none
+hi CursorLineNr ctermbg=0 ctermfg=208 cterm=none
+
+
+hi LineNr ctermfg=60 ctermbg=none
+hi VertSplit ctermfg=60 ctermbg=none
+hi Visual ctermfg=0 ctermbg=4
+hi StatusLine ctermfg=233 ctermbg=2
+hi StatusLineNC ctermfg=60 ctermbg=233

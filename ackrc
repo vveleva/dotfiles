@@ -1,0 +1,11 @@
+--type-set
+coffee=.coffee
+--pager=less -R
+
+--type-add
+ruby=.haml,.feature,.scss,.coffee
+
+--ignore-dir=migrations
+--ignore-dir=vendor
+--ignore-dir=log
+--ignore-dir=tmp

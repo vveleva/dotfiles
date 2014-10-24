@@ -1,0 +1,45 @@
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+
+" Let Vundle manage Vundle
+Plugin 'gmarik/Vundle.vim'
+
+" Define bundles via Github repos
+Plugin 'bronson/vim-visual-star-search'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'kien/ctrlp.vim' " Ryan ditched this for pick.vim (also consider fzf.vim)
+Plugin 'rking/ag.vim'   " Ryan ditched this for a user-defined command
+Plugin 'scrooloose/nerdtree' " Ryan ditched this for vinegar.vim
+Plugin 'scrooloose/syntastic'
+Plugin 'tomtom/tcomment_vim' " Ryan ditched this for tpope/vim-commentary
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+
+" syntax and langauge plugins
+Plugin 'briancollins/vim-jst'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'mtscout6/vim-cjsx'
+Plugin 'tpope/vim-rails'
+" Plugin 'tpope/vim-haml' " SASS, HAML, SCSS syntax
+Plugin 'vim-ruby/vim-ruby'
+
+" css color highlighting
+Plugin 'skammer/vim-css-color'
+Plugin 'vim-scripts/hexHighlight.vim'
+
+" Color schemes
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+
+" Snipmate engine for Textmate-style snippets
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'tomtom/tlib_vim'
+
+" Interactive ruby pry compilation
+Plugin 'jpalardy/vim-slime'
+
+call vundle#end()
+filetype on
