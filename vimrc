@@ -140,7 +140,7 @@ vnoremap <Leader>sl :call SortLines()<CR>
 
 " System clipboard copy/paste
 xnoremap <C-c> "*y
-nnoremap <Leader>p :set paste<CR>"*]p:set nopaste<CR>
+nnoremap <Leader>p :set paste expandtab<CR>"*]p:set nopaste<CR>
 
 " Better shortcut for navigating between split windows
 nnoremap <Leader>w <C-w>w
