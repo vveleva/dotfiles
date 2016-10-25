@@ -5,7 +5,7 @@
 [[ -f ~/.zsh_user_config ]] && source ~/.zsh_user_config
 
 ##### REQUIRED BY RBENV ########################################################
-export PATH="/usr/local/sbin:$PATH:${HOME}/bin"
+export PATH="/usr/local/sbin:$PATH:${HOME}/bin:/usr/sbin"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
