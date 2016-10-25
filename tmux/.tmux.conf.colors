@@ -21,6 +21,7 @@ set -g status "on"
 set -g status-right-length "100"
 set -g status-right-attr default
 set -g status-attr default
+set -g status-position top
 
 # set color of active pane
 set -g pane-border-fg "colour233" # darkgray

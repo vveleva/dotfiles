@@ -1,4 +1,13 @@
+# tmux man page
+  #H    Hostname of local host
+  #h    Hostname of local host without the domain name
+  #F    Current window flag
+  #I    Current window index
+  #S    Session name
+  #W    Current window name
+  #(shell-command)  First line of the command's output
 
+string will be passed through strftime(3) before being used.
 ##### STATUS BAR ###########################################################
 set -g status-interval 30 # set refresh interval for status bar
 set -g status-justify left # center the status bar
@@ -6,8 +15,6 @@ set -g status-justify left # center the status bar
 # visual notification of activity in other windows
 setw -g monitor-activity on
 set -g visual-activity on
-
-set -g status-left-attr "none"
 
 # color for status bar
 setw -g window-status-fg "colour85"
@@ -18,8 +25,22 @@ setw -g window-status-activity-fg "colour2"
 setw -g window-status-activity-bg "colour233"
 setw -g window-status-activity-attr "none"
 
+# local variables
+green_right_arrow="#[fg=colour2, bg=colour238, nobold, nounderscore,noitalics]"
+green_left_arrow="#[fg=colour2, nobold, nounderscore, noitalics]"
+gray_right_arrow="#[fg=colour238, bg=colour233, nobold, nounderscore, noitalics]"
+gray_left_arrow="#[fg=colour238, bg=colour233, nobold, nounderscore, noitalics]"
+
+session_name_stats="#[fg=colour16, bg=colour2] #S $green_right_arrow"
+current_window_name="#[fg=colour255, bg=colour238] #W $gray_right_arrow"
+current_window_index="#[fg=colour255, bg=colour238] #I"
+time_stats="$gray_left_arrow#[fg=colour255, bg=colour238] %Y-%m-%d #[fg=colour2] #[fg=colour255]%l:%M %p"
+battery_stats="#[fg=colour2]#{battery_status_fg}#{battery_status_bg}#[fg=colour16] #{battery_percentage}"
+laptop_stats="$green_left_arrow#[fg=colour16, bg=colour2] #h " # eg. vvvmbp13
+
+
 setw -g window-status-separator ""
-set -g status-left "#[fg=colour16, bg=colour2] #S #[fg=colour2, bg=colour233, nobold, nounderscore,noitalics]"
-set -g status-right "#[fg=colour238, bg=colour233, nobold, nounderscore, noitalics]#[fg=colour255, bg=colour238] %Y-%m-%d  %H:%M  #{battery_icon} #{battery_percentage} #{battery_remain} #[fg=colour2, bg=colour238, nobold, nounderscore, noitalics]#[fg=colour16, bg=colour2] #h "
-setw -g window-status-format "#[fg=colour85, bg=colour233] #I #[fg=colour85, bg=colour233] #W "
-setw -g window-status-current-format "#[fg=colour233, bg=colour238, nobold, nounderscore, noitalics]#[fg=colour255, bg=colour238] #I #[fg=colour255, bg=colour238] #W #[fg=colour238, bg=colour233, nobold, nounderscore, noitalics]"
+set -g status-left "$session_name_stats"
+set -g status-right "$time_stats $battery_stats $laptop_stats"
+# setw -g window-status-format "#[fg=colour85, bg=colour233] #I #[fg=colour2]#[fg=colour85, bg=colour233] #W "
+setw -g window-status-current-format "$current_window_index #[fg=colour2]$current_window_name"
