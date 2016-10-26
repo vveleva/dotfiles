@@ -1,4 +1,7 @@
 ##### COLORS ###############################################################
+# local variables
+dark_gray="colour233"
+
 # use 256 term for pretty colors
 set -g default-terminal "screen-256color"
 
@@ -7,14 +10,14 @@ set-window-option -g window-status-current-fg black
 set-window-option -g window-status-current-bg red
 
 # colorize messages in the command line
-set -g message-command-fg "colour255"
-set -g message-command-bg "colour238"
-set -g message-bg "colour238"
-set -g message-fg "colour255"
+set -g message-command-fg white
+set -g message-command-bg colour238
+set -g message-bg colour238
+set -g message-fg white
 
 # color status bar
 set -g status-fg white
-set -g status-bg "colour233"
+set -g status-bg default
 set -g status-justify "left"
 set -g status-left-length "100"
 set -g status "on"
@@ -24,7 +27,7 @@ set -g status-attr default
 set -g status-position top
 
 # set color of active pane
-set -g pane-border-fg "colour233" # darkgray
+set -g pane-border-fg $dark_gray
 set -g pane-border-bg default
 set -g pane-active-border-fg brightblue
 set -g pane-active-border-bg default
