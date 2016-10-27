@@ -1,4 +1,0 @@
-# export PATH="/Users/velina/.rvm/gems/ruby-2.1.2/bin:/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:/Applications/Postgres.app/Contents/Versions/9.4/bin:$HOME/bin:/$HOME/local/node/bin:/$HOME/node_modules/.bin:$HOME/.ec2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin"
-# export PATH="/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin: \ /Applications/Postgres.app/Contents/Versions/9.4/bin:$HOME/bin:/$HOME/local/node/bin:/$HOME/node_modules/.bin:$HOME/.ec2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin"
-export PATH="/$HOME/bin:/Users/velina/bin:$HOME:Users/velina"
-export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:/usr/local/bin:/usr/bin:/bin"
