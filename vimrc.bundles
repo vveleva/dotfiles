@@ -41,5 +41,8 @@ Plugin 'tomtom/tlib_vim'
 " Interactive ruby pry compilation
 Plugin 'jpalardy/vim-slime'
 
+" LaTex plugin
+Plugin 'lervag/vimtex'
+
 call vundle#end()
 filetype on

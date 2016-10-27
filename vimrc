@@ -4,32 +4,32 @@ runtime macros/matchit.vim
 
 syntax on " Enable syntax highlighting.
 
-set autoindent            " Next-line indentation; should be the same as smartindent
-set backspace=2           " Backspace deletes like most programs in insert mode
-set diffopt+=vertical     " Use vertical splits in Gdiff
-set encoding=utf-8        " use UTF-8.
-set fillchars+=vert:│     " custom character for vertical split separator
-set hlsearch              " Highlight search results
-set ignorecase            " Ignore case when searching.
-set incsearch             " Search as you type.
-set lazyredraw            " Boost performance a little bit
-set mouse+=niv            " Allow scrolling and mouse selecting
-set nojoinspaces          " One space after periods when joining lines
-set noswapfile            " Disable swapfiles
-set ruler                 " Show line number, cursor position.
-set showcmd               " Display incomplete commands.
-set showmode              " Show editing mode
-set smartcase             " Overrides ignorecase if pattern contains caps
-set splitbelow splitright " Open splits to the right and bottom
+set autoindent                    " Next-line indentation; keep same as smartindent
+set backspace=2                   " Backspace deletes like most programs in insert mode
+set diffopt+=vertical             " Use vertical splits in Gdiff
+set encoding=utf-8                " use UTF-8.
+set fillchars+=vert:│             " custom character for vertical split separator
+set hlsearch                      " Highlight search results
+set ignorecase                    " Ignore case when searching.
+set incsearch                     " Search as you type.
+set lazyredraw                    " Boost performance a little bit
+set mouse+=niv                    " Allow scrolling and mouse selecting
+set nojoinspaces                  " One space after periods when joining lines
+set noswapfile                    " Disable swapfiles
+set ruler                         " Show line number, cursor position.
+set showcmd                       " Display incomplete commands.
+set showmode                      " Show editing mode
+set smartcase                     " Overrides ignorecase if pattern contains caps
+set splitbelow splitright         " Open splits to the right and bottom
 set timeoutlen=1000 ttimeoutlen=0 " Eliminate delay on ESC
-set undodir=$HOME/.vim/undodir      " Store undofiles in $HOME/.vim/undodir
-set undofile                        " Record undo history after leaving buffer
-set visualbell            " Error bells are displayed visually.
-set wildmenu              " Show autocomplete menus.
+set undodir=$HOME/.vim/undodir    " Store undofiles in $HOME/.vim/undodir
+set undofile                      " Record undo history after leaving buffer
+set visualbell                    " Error bells are displayed visually.
+set wildmenu                      " Show autocomplete menus.
 
-set cursorline            " Highlight currently-selected line
+set cursorline                    " Highlight currently-selected line
 set cursorcolumn
-set number relativenumber " Hybrid line numbers
+set number relativenumber         " Hybrid line numbers
 
 " Soft tabs, 2 spaces
 set shiftwidth=2

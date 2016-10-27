@@ -9,37 +9,37 @@ set -g visual-activity on
 # local variables
 gray="colour238"
 purple="colour60"
-dark_gray="colour233"
 true_black="colour16"
 right_arrow="#[nobold, nounderscore, noitalics]"
 left_arrow="#[nobold, nounderscore, noitalics]"
-green_right_arrow="#[fg=green, bg=$gray]$right_arrow"
-green_left_arrow="#[fg=green]$left_arrow"
-gray_arrow_style="#[fg=$gray, bg=brightblack]"
-gray_right_arrow="#$gray_arrow_style$right_arrow"
-gray_left_arrow="#$gray_arrow_style$left_arrow"
+gray_style="#[fg=$gray, bg=brightblack]"
 
-session_name_stats="#[fg=$true_black, bg=green] #{session_name} $green_right_arrow"
-window_name_stats="#[fg=white, bg=$gray] #{window_name} $gray_right_arrow"
-window_index_stats="#[fg=white, bg=$gray] #{window_index}"
-year="$gray_left_arrow#[fg=colour255, bg=$gray] %Y-%m-%d"
+window_name_stats="#[fg=white] #{window_name} $gray_style$right_arrow"
+window_index_stats="#[fg=green, bg=$gray] #{window_index}"
+year="$gray_style$left_arrow#[fg=white, bg=$gray] %Y-%m-%d"
 time="#[fg=white]%l:%M %p"
 time_stats="$year #[fg=green] $time"
 battery_stats="#[fg=green]#{battery_status_fg}$left_arrow#{battery_status_bg}#[fg=$true_black] #{battery_percentage} "
-laptop_stats="$green_left_arrow#[fg=$true_black, bg=green] #h" # eg. vvvmbp13
+laptop_stats="#[fg=green]$left_arrow#[fg=$true_black, bg=green] #h" # eg. vvvmbp13
 
 
 # color for status bar
-setw -g window-status-fg "colour85"
-setw -g window-status-bg "$dark_gray"
-setw -g window-status-attr "none" # another option is dim instead of "none"
+setw -g window-status-fg colour85
+setw -g window-status-bg colour233
 
-setw -g window-status-activity-fg "green" # also known as colour2
-setw -g window-status-activity-bg "$dark_gray"
-setw -g window-status-activity-attr "none"
+setw -g window-status-activity-fg green
+setw -g window-status-activity-bg colour233
+
+set -g status-left "#[fg=$true_black, bg=green] #{session_name} #[fg=green, bg=brightblack]$right_arrow"
+set -g status-right "$time_stats $laptop_stats $battery_stats"
 
 setw -g window-status-separator ""
-set -g status-left "$session_name_stats"
-set -g status-right "$time_stats $laptop_stats $battery_stats"
-# setw -g window-status-format "#[fg=colour85, bg=$dark_gray] #I #[fg=colour2]#[fg=colour85, bg=$dark_gray] #W "
-setw -g window-status-current-format "$window_index_stats #[fg=green]$window_name_stats"
+
+window_index_stat="#[fg=green]#{window_index} "
+window_index_stat_current="#[bg=brightblack] #[fg=brightblack, bg=$gray]$right_arrow#[bg=$gray] $window_index_stat"
+setw -g window-status-current-format "$window_index_stat_current$window_name_stats"
+
+setw -g window-status-format "$window_index_stat #{window_name} "
+setw -g window-status-format "#[bg=colour8] $window_index_stat#{?window_activity_flag,#[fg=magenta],#[fg=brightmagenta]} #{window_name} "
+
+setw -g monitor-activity on

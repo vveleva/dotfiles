@@ -1,7 +1,4 @@
 ##### COLORS ###############################################################
-# local variables
-dark_gray="colour233"
-
 # use 256 term for pretty colors
 set -g default-terminal "screen-256color"
 
@@ -27,7 +24,7 @@ set -g status-attr default
 set -g status-position top
 
 # set color of active pane
-set -g pane-border-fg $dark_gray
+set -g pane-border-fg colour233
 set -g pane-border-bg default
-set -g pane-active-border-fg brightblue
+set -g pane-active-border-fg brightmagenta
 set -g pane-active-border-bg default
