@@ -115,6 +115,8 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+command! -nargs=+ -complete=file -bar Ag silent! grep! <args> | redraw! | cwindow
+
 let g:slime_target = "tmux" " Setting up vim_slime to use tmux sessions
 let g:syntastic_javascript_checkers = ['jslint']
 let g:cssColorVimDoNotMessMyUpdatetime = 1

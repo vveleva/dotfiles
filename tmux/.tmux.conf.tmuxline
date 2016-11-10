@@ -35,11 +35,10 @@ set -g status-right "$time_stats $laptop_stats $battery_stats"
 
 setw -g window-status-separator ""
 
-window_index_stat="#[fg=green]#{window_index} "
-window_index_stat_current="#[bg=brightblack] #[fg=brightblack, bg=$gray]$right_arrow#[bg=$gray] $window_index_stat"
+window_index_stat="#{?window_activity_flag,#[bg=green],#[bg=brightblack]}#{?window_activity_flag,#[fg=brightblack],#[fg=green]}#{window_index} "
+window_index_stat_current="#[bg=brightblack] #[fg=brightblack, bg=$gray]$right_arrow#[bg=$gray] #{?window_activity_flag,#[fg=brightblack],#[fg=green]}#{window_index} #{?window_activity_flag,#[bg=green],#[bg=$gray]}"
 setw -g window-status-current-format "$window_index_stat_current$window_name_stats"
 
-setw -g window-status-format "$window_index_stat #{window_name} "
-setw -g window-status-format "#[bg=colour8] $window_index_stat#{?window_activity_flag,#[fg=magenta],#[fg=brightmagenta]} #{window_name} "
+setw -g window-status-format "#{?window_activity_flag,#[fg=brightblack],#[bg=brightblack]} $window_index_stat#{?window_activity_flag,#[bg=magenta],#[fg=brightmagenta]} #{window_name} "
 
 setw -g monitor-activity on

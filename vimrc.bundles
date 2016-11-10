@@ -9,7 +9,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'bronson/vim-visual-star-search'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'kien/ctrlp.vim' " Ryan ditched this for pick.vim (also consider fzf.vim)
-Plugin 'rking/ag.vim'   " Ryan ditched this for a user-defined command
 Plugin 'scrooloose/nerdtree' " Ryan ditched this for vinegar.vim
 Plugin 'scrooloose/syntastic'
 Plugin 'tomtom/tcomment_vim' " Ryan ditched this for tpope/vim-commentary
