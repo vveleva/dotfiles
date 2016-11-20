@@ -1,0 +1,107 @@
+body, body.with-listing-chooser .listing-chooser .grippy, .side {
+  background-color: #002833;
+}
+
+body, .tagline, .search-result-meta, .domain, .domain a, .sidecontentbox .title h1 {
+  color: #586e75;
+}
+
+.thing .title, .thing .source-url {
+  color: #3d92f8;
+}
+
+.thing .title:visited, .thing .source-url:visited {
+  color: #6c6ec6;
+}
+
+.entry .buttons li a, .trending-subreddits .comments, .sponsored-tagline, .sidebox .spacer .subtitle, .gadget small, .goldvertisement {
+  color: #788e95;
+}
+
+#header {
+  background-color: #003541;
+  border-color: #003541;
+}
+
+.sidebox .spacer, .sidecontentbox .content, .goldvertisement, .goldvertisement .inner {
+  background-color: #003541;
+  border-color: #003541;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.goldvertisement .progress p {
+  color: #f3e287;
+}
+
+#header-bottom-right, #header-bottom-right .separator {
+  background-color: #72b824;
+  border-color: #72b824;
+  color: #333;
+}
+
+#sr-header-area, #sr-header-area .separator, .sr-bar .separator {
+  background-color: #f8317a;
+  border-color: #f8317a;
+  color: #333;
+}
+
+.user, .user a, #header-bottom-right a {
+  color: #000;
+}
+
+.link.promotedlink.promoted, .link.promotedlink.external, .organic-listing {
+  background-color: #205561;
+  border-color: #205561;
+}
+
+.tabmenu li a {
+  background-color: #268bd2;
+  border-color: #268bd2;
+  color: #dfe8ee;
+  font-weight: normal;
+  border-radius: 4px;
+  padding: 3px 8px;
+}
+
+.morelink .nub {
+  display: none;
+}
+
+.morelink, .morelink a {
+  background-color: #268bd2;
+  background-image: none;
+  border-color: #268bd2;
+  color: #dfe8ee;
+  border-radius: 4px;
+}
+
+.link:hover {
+  background-color: #003541;
+}
+
+.link:not(:first-child) {
+  border-top: 1px solid #002833;
+}
+
+.linkflairlabel {
+  background-color: #cb4b16;
+  border-color: #cb4b16;
+  color: #dfe8ee;
+  font-weight: normal;
+  border-radius: 4px;
+  padding: 0px 4px;
+}
+
+.expando-button.collapsed.selftext {
+  background-image: url('https://www.redditstatic.com/sprite-expando.2qrMoUHZue8.png');
+  background-position: 0px -104px;
+  background-repeat: no-repeat;
+}
+
+.expando-button.collapsed.video {
+  background-image: url('https://www.redditstatic.com/sprite-expando.2qrMoUHZue8.png');
+  background-position: 0px -52px;
+  background-repeat: no-repeat;
+}
+

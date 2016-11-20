@@ -1,0 +1,71 @@
+body,.mw-body {
+  background-color: #002833;
+}
+
+.mw-body, .infobox td, div#footer ul li, #pt-anonuserpage {
+  color: #586e75;
+  border-color: #003541;
+}
+
+div.vectorTabs span, div#mw-head, div.vectorTabs span a {
+  background-color: #003541;
+}
+
+.left-navigation * {
+  border-color: #003541;
+}
+
+div.vectorTabs li.selected a {
+  color: #fff;
+}
+
+a {
+  color: #268bd2;
+}
+
+a:hover, a:focus, a:visited {
+  color: #6c6ec6;
+}
+
+h1, h2, h3, h4, h5, h6, .tocnumber, .client-js .mw-content-rtl .mw-editsection-bracket:first-of-type, .client-js .mw-content-ltr .mw-editsection-bracket:not( :first-of-type), .client-js .mw-content-ltr .mw-editsection-bracket:first-of-type, .client-js .mw-content-rtl .mw-editsection-bracket:not( :first-of-type ), .infobox th {
+  color: #dfe8ee;
+  border-color: #003541;
+}
+
+#toc, .toc, .mw-warning, .toccolours, .infobox, .thumbinner, .catlinks, .navbox {
+  background-color: #003541;
+  border-color: #003541;
+  border-radius: 4px;
+}
+
+code {
+  background-color: #205561;
+}
+
+.error {
+  color: #f25;
+}
+
+div#mw-panel div.portal {
+  background-image: none;
+}
+
+html .thumbimage, .navbox-list {
+  border-color: #003541;
+}
+
+.mwe-math-fallback-image-inline {
+  background-color: #dfe8ee;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+div#mw-panel div.portal:not(:last-of-type) {
+  border-bottom: 1px solid #003541;
+}
+
+table.wikitable > tr > th, table.wikitable > * > tr > th, table.wikitable > tr > td, table.wikitable > * > tr > td {
+  background-color: #003541;
+  border-color: #002833;
+  color: #dfe8ee;
+}

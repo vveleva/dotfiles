@@ -1,0 +1,84 @@
+body {
+  background-color: #002833;
+  color: #586e75;
+}
+
+body * {
+  font-family: Monaco;
+}
+
+.forum_header_border_normal {
+  display: none;
+}
+
+.forum_header_border {
+  background-image: none;
+}
+
+.forum_thread_header, .forum_thread_header_end, .section_post_header, td.header_date, #site_menu {
+  background-image: none;
+  background-color: #104551;
+}
+
+.section_create, .section_header_column, .forum_header {
+  background-color: #003541;
+}
+
+.forum_header_border tr {
+  background-color: #003541;
+}
+
+.forum_header_border, table, tr, td {
+  border-color: #002833;
+}
+
+.forum_header_border tr:hover {
+  background-color: #205561;
+}
+
+.forum_header_border td {
+  border-color: #002833;
+  padding: 1px 4px;
+}
+
+td.forum_thread_post {
+  color: #788e95;
+}
+
+td.forum_thread_post a {
+  color: #afbfce;
+}
+
+td.forum_thread_post:hover a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a.thread_link, a {
+  color: #268bd2;
+}
+
+.forum_thread_post_end:hover a, a.thread_link:hover {
+  color: #66cbff;
+}
+
+.forum_thread_post_end {
+  color: #788e95;
+}
+
+.forum_thread_header {
+  border: none;
+}
+
+#line {
+  border-color: #003541;
+}
+
+.magnet, .download_1, .download_2, .download_3, .download_4, .download_5 {
+  background-color: #70a5b1;
+  border-radius: 3px;
+}
+
+#header_logo, #site_menu {
+  display: none;
+}

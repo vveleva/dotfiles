@@ -1,0 +1,49 @@
+.Header, .Closeup.canClose, body, .Header .rightHeaderContent .RightHeader {
+  background-color: #002833;
+}
+
+.PaddedPin .paddedPinLink, .Pin.detailed .closeupContentSection, .Pin.summary, .PinActionBar.sticky, .PinActionBar, .Pin.summary, .Button.categoriesHeader {
+  background-color: #104551;
+}
+
+.Pin.summary .pinCredits>.pinCreditWrapper .creditItem .creditName, .Pin.summary .pinCredits>.pinCreditWrapper .creditItem .creditTitle, .User.linkModule .profileSource .profileSourceAttributionContent .fullname, .User.linkModule .profileSource .profileSourceAttributionContent .title, .item p, .richPinPhotoSource, .savedTo span, .userNote, a, .CloseupBottom .sectionTitle, h3.fullname {
+  color: #586e75;
+  text-shadow: none;
+}
+
+.AggregatedCloseupCard .boardCountHeader, .AggregatedCloseupCard .pinActivityContainer .pinActivity .userActivity a, .Pin.summary .richPinMeta .richPinGridTitle, p.pinDescription, .richPinPhotoSource a, h2.title {
+  color: #dfe8ee;
+}
+
+.Pin.summary .pinImageActionButtonWrapper .pinImageDim .dimOverlay {
+  border-radius: 4px 4px 0 0;
+}
+
+.Pin.summary .pinImageWrapper, .Pin.summary .pinImg.fullBleed, .Pin.summary .hoverMask, .Pin.summary .pinWrapper, .Pin.summary:not(.hideHoverUI) .pinWrapper::before, .Pin.summary, .Button.categoriesHeader {
+  border-radius: 4px;
+}
+
+div.creditItem a {
+  margin-bottom: 7px;
+}
+
+.Pin.detailed .hr {
+  border-color: #002833;
+}
+
+.Pin .pinImageActionButtonWrapper .navLinkOverlay {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(100%, rgba(16,69,81,1)));
+  padding-top: 250px;
+  border-radius: 0;
+}
+
+div.creditFooter {
+  color: #588;
+  background-color: #104551;
+  width: 93%;
+}
+
+a.boardLinkWrapper {
+  background-color: #104551;
+}
+

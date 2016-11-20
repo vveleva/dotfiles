@@ -1,0 +1,92 @@
+body, #hdtb, #hdtbSum {
+  background-color: #002833;
+  color: #586e75;
+  border-color: #003541;
+}
+
+._qhf, .klbar, ._Vjf._Kjf._qkf._Qjf, .rl_item {
+  border-color: #002833;
+}
+
+#fbar, ._Vjf._Kjf._qkf._Qjf, .sfbgg {
+  background-color: #003541;
+  border-color: #003541;
+}
+
+.scrt tr:first-child td, .scrt tr:last-child td, ._yIl, #center_col ._Ak, ._baj, .vk_arc, .sh-sr__shop-result-group {
+  border-color: #003541;
+}
+
+.xpdclose ._T1i:not(:empty), .xpdopen ._U1i:not(:empty), .kp-blk .xpdclose ._wle, .kp-blk .xpdopen ._xle, ._UIf ._SIf, ._UIf ._hvg, ._lMn {
+  border-color: #002833;
+}
+
+.rgsep, .xpdopen {
+  background-color: #003541;
+}
+
+#appbar {
+  background-color: #003541;
+}
+
+a:link, .w, #prs a:visited, #prs a:active, .q:active, .q:visited, .kl:active, .tbotu, ._V9o, ._tX, ._tX.ellip {
+  color: #268bd2;
+}
+
+.mblink:visited, a:visited, ._V9o:visited, ._P0e._LCd._tX:visited {
+  color: #6c6ec6;
+}
+
+.s, #resultStats, #center_col ._Ak, ._yIl, ._CNj, ._uAe, ._xK ._h3d, ._wD ._Xbe, ._cnc, ._Lqc, ._tyb, .shop__secondary, .shop__secondary:link, .shop__secondary:visited, .sr__restricts, .sr__fs, div._Kpm div, div._zX.ellip {
+  color: #586e75;
+}
+
+.s .st em, .st.s.std em, ._cwc, ._thf ._pk, #brs .med, ._HR, .unknown_loc, ._gdf, ._W5e, ._Rsi, ._Ajf, ._TCn, ._mMg, ._UCn, ._zjf, ._Jjg, ._Adb, ._uQb, .sr__title, .stt__tool, .lc-loc-text, .f, .f a:link, div._Qsh i, div._Zmm {
+  color: #789ea5;
+}
+
+.a, cite, cite a:link, cite a:visited, .cite, .cite:link, #_bGc>i, .bc a:link, ._Klm, ._IId {
+  color: #72b824;
+}
+
+#foot #navcnt .cur {
+  color: #fff;
+}
+
+.kno-ecr-pt, ._tvg, ._czk, ._xdb a.fl, ._bXl, .rl_item .title, ._pk, ._wD {
+  color: #dfe8ee;
+}
+
+.autopagerize_page_separator {
+  border: 1px solid #003541;
+}
+
+#cnt {
+  background-color: inherit;
+}
+
+.rg_bb_label, .price {
+  color: #dfe8ee;
+}
+
+.rg_fbl, #ifbd {
+  background-color: #003541;
+  border-color: #003541;
+}
+
+.rg_fbl:hover {
+  background-color: #104551;
+}
+
+#irc_bgl {
+  background-color: #003541;
+  border-color: #003541;
+}
+
+.irc_land .irc_sep, .irc_infosep {
+  box-shadow: none;
+  background-color: #002833;
+  border-color: #002833;
+}
+
+.th { border-color: #003541; }
