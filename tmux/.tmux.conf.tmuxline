@@ -7,20 +7,22 @@ setw -g monitor-activity on
 set -g visual-activity on
 
 # local variables
-gray="colour238"
-purple="colour60"
-true_black="colour16"
-right_arrow="#[nobold, nounderscore, noitalics]"
-left_arrow="#[nobold, nounderscore, noitalics]"
+gray=colour238
+purple=colour60
+true_black=colour16
+l_arrow="#[nobold, nounderscore, noitalics]"
+r_arrow="#[nobold, nounderscore, noitalics]"
 gray_style="#[fg=$gray, bg=brightblack]"
 
-window_name_stats="#[fg=white] #{window_name} $gray_style$right_arrow"
-window_index_stats="#[fg=green, bg=$gray] #{window_index}"
-year="$gray_style$left_arrow#[fg=white, bg=$gray] %Y-%m-%d"
+set -g status-left "#[fg=$true_black, bg=green] #{session_name} #[fg=green, bg=brightblack]$r_arrow "
+
+year="#[fg=white, bg=$gray] %Y-%m-%d"
 time="#[fg=white]%l:%M %p"
-time_stats="$year #[fg=green] $time"
-battery_stats="#[fg=green]#{battery_status_fg}$left_arrow#{battery_status_bg}#[fg=$true_black] #{battery_percentage} "
-laptop_stats="#[fg=green]$left_arrow#[fg=$true_black, bg=green] #h" # eg. vvvmbp13
+time_stats="$gray_style$l_arrow$year #[fg=green] $time"
+laptop_stat="#[fg=green]$l_arrow#[fg=$true_black, bg=green] #h" # eg. vvvmbp13
+battery_stat="#[fg=green]#{battery_status_fg}$l_arrow#{battery_status_bg}#[fg=$true_black] #{battery_percentage} "
+
+set -g status-right "$time_stats $laptop_stat $battery_stat"
 
 
 # color for status bar
@@ -30,15 +32,16 @@ setw -g window-status-bg colour233
 setw -g window-status-activity-fg green
 setw -g window-status-activity-bg colour233
 
-set -g status-left "#[fg=$true_black, bg=green] #{session_name} #[fg=green, bg=brightblack]$right_arrow"
-set -g status-right "$time_stats $laptop_stats $battery_stats"
-
 setw -g window-status-separator ""
 
-window_index_stat="#{?window_activity_flag,#[bg=green],#[bg=brightblack]}#{?window_activity_flag,#[fg=brightblack],#[fg=green]}#{window_index} "
-window_index_stat_current="#[bg=brightblack] #[fg=brightblack, bg=$gray]$right_arrow#[bg=$gray] #{?window_activity_flag,#[fg=brightblack],#[fg=green]}#{window_index} #{?window_activity_flag,#[bg=green],#[bg=$gray]}"
-setw -g window-status-current-format "$window_index_stat_current$window_name_stats"
 
-setw -g window-status-format "#{?window_activity_flag,#[fg=brightblack],#[bg=brightblack]} $window_index_stat#{?window_activity_flag,#[bg=magenta],#[fg=brightmagenta]} #{window_name} "
+wi_arrow="#{window_index} "
 
-setw -g monitor-activity on
+window_name_stats="#[fg=green]$wi_arrow #{window_name} $gray_style$r_arrow"
+
+setw -g window-status-current-format "#[fg=brightblack, bg=$gray]$r_arrow $window_name_stats"
+
+wsf_active="#[fg=brightblack] #[bg=green]$wi_arrow#[bg=magenta]"
+wsf_inactive="#[bg=brightblack] #[fg=green]$wi_arrow#[fg=brightmagenta]"
+
+setw -g window-status-format "#{?window_activity_flag,$wsf_active,$wsf_inactive} #{window_name} "

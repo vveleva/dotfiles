@@ -1,0 +1,84 @@
+##### GENERAL ##############################################################
+bind -t vi-copy v begin-selection
+
+# Sane scrolling
+set -g mouse on
+
+# remap leader ctrl-b to ctrl-space
+unbind C-b
+set -g prefix C-Space
+bind C-s send-prefix # Pass on ctrl+space for other apps
+
+bind \ split-window -h # Split panes horizontal
+bind - split-window -v # Split panes vertically
+
+set -g escape-time 0
+
+# Enable screen-like C-s C-s moving to last window
+bind C-s last-window
+
+bind b break-pane -d
+
+bind T swap-window -t 1 # Make the current window the first window
+
+# reload ~/.tmux.conf using PREFIX r
+unbind r
+bind r source-file ~/.tmux.conf \; display "Reloaded!"
+
+
+# map Vi movement keys as pane movement keys
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# resize panes using PREFIX H, J, K, L
+bind -n S-Left resize-pane -L 1
+bind -n S-Right resize-pane -R 1
+bind -n S-Down resize-pane -D 1
+bind -n S-Up resize-pane -U 1
+
+##### COPY & PASTE #########################################################
+# provide access to the clipboard for pbpaste, pbcopy
+set -g default-command "reattach-to-user-namespace -l ${SHELL}"
+setw -g automatic-rename on
+
+bind y run "tmux save-buffer - | reattach-to-user-namespace pbcopy "
+bind C-y run "tmux save-buffer - | reattach-to-user-namespace pbcopy "
+
+# allows moving a tmux tab to the left or right
+bind -T prefix h swap-window -t -
+bind -T prefix l swap-window -t +
+
+set -g base-index 1
+set -g renumber-windows on
+
+
+# Vim key bindings
+
+# Smart pane switching with awareness of Vim splits.
+# See: https://github.com/christoomey/vim-tmux-navigator
+is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
+    | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
+bind -n C-h if-shell "$is_vim" "send-keys C-h"  "select-pane -L"
+bind -n C-j if-shell "$is_vim" "send-keys C-j"  "select-pane -D"
+bind -n C-k if-shell "$is_vim" "send-keys C-k"  "select-pane -U"
+bind -n C-l if-shell "$is_vim" "send-keys C-l"  "select-pane -R"
+bind -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
+
+bind -n S-Left resize-pane -L 1
+bind -n S-Right resize-pane -R 1
+bind -n S-Down resize-pane -D 1
+bind -n S-Up resize-pane -U 1
+
+setw -g mode-keys vi # use vim keybindings in copy mode
+
+# update default binding of 'Enter' to also use copy-pipe
+unbind -t vi-copy Enter
+bind -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
+
+# setup 'v' to begin selection as in Vim
+set -g status-keys vi
+bind -t vi-copy v begin-selection
+bind -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
+bind -t vi-copy MouseDragEnd1Pane copy-pipe "reattach-to-user-namespace pbcopy"
