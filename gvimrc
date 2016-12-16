@@ -29,6 +29,3 @@ set guioptions-=L
 set guioptions-=r
 set guioptions-=R
 set guicursor+=a:blinkon0 " Disable cursor blink
-
-" set guifont=Source\ Code\ Pro\ for\ Powerline "make sure to escape the spaces in the name properly
-

@@ -20,7 +20,6 @@ Plugin 'briancollins/vim-jst'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mtscout6/vim-cjsx'
 Plugin 'tpope/vim-rails'
-" Plugin 'tpope/vim-haml' " SASS, HAML, SCSS syntax
 Plugin 'vim-ruby/vim-ruby'
 
 " css color highlighting
@@ -29,7 +28,6 @@ Plugin 'vim-scripts/hexHighlight.vim'
 
 " Color schemes
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomasr/molokai'
 
 " Snipmate engine for Textmate-style snippets
 Plugin 'MarcWeber/vim-addon-mw-utils'
