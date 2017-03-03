@@ -26,8 +26,7 @@ end
 
 function handle_key_down(event)
   -- print(hs.inspect(event:getRawEventData()))
-    should_send_escape = false
-  end
+  should_send_escape = false
 end
 
 local flags_changed_listener = hs.eventtap.new(
