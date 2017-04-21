@@ -131,6 +131,9 @@ let g:jsx_ext_required = 0
 
 nnoremap Q <nop>
 
+" map Tab to Esc
+inoremap <tab> <esc>
+
 " Faster split navigation
 " nnoremap <C-h> <C-w>h
 " nnoremap <C-j> <C-w>j
