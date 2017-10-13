@@ -103,17 +103,18 @@ function! SortLines() range
   execute a:firstline . "," . a:lastline . 's/^\d\+\s//'
 endfunction
 
-
-
 if executable('ag')
   " set grepprg=ag\ --nogroup\ --nocolor
   set grepprg=ag
 
-  " Use Ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-
-  let g:ctrlp_use_caching = 0
+  " " Use Ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  " let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+  "
+  " let g:ctrlp_use_caching = 0
 endif
+
+" Substitute for CTRL-P
+nnoremap <C-p> :call PickFile()<CR>
 
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args> | redraw! | cwindow
 
@@ -132,13 +133,11 @@ let g:jsx_ext_required = 0
 nnoremap Q <nop>
 
 " map Tab to Esc
-inoremap <tab> <esc>
+" inoremap <tab> <esc>
 
-" Faster split navigation
-" nnoremap <C-h> <C-w>h
-" nnoremap <C-j> <C-w>j
-" nnoremap <C-k> <C-w>k
-" nnoremap <C-l> <C-w>l
+" insert timestamp
+:nnoremap <F5> "=strftime("%c")<CR>P
+:inoremap <F5> <C-R>=strftime("%c")<CR>
 
 vnoremap <Leader>sm :call SortRubyMethods()<CR>
 vnoremap <Leader>sl :call SortLines()<CR>
@@ -175,17 +174,18 @@ nnoremap <D-F> :Ag<Space>
 " Copy current path into the system clipboard
 nnoremap <Leader>% :let @+ = expand("%")<CR>
 
+" Keyword.vim (thanks Ryan!)
+let g:keyword_command = 'Ag --fixed-strings {keyword}'
+
 " ##### Plugins ##############################################
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
-
 " ##### Color Scheme #########################################
 if filereadable(expand("~/.vimrc.colors"))
   source ~/.vimrc.colors
 endif
-
 
 " ##### Local Config ########################################
 if filereadable(glob(".vimrc.local"))

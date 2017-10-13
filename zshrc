@@ -6,14 +6,18 @@ source_file ~/.zsh_setup
 
 ##### CONFIGURE PATH ###########################################################
 PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+##### LOAD NVM #################################################################
+export NVM_DIR="$HOME/.nvm"
+source "$(brew --prefix nvm)/nvm.sh"
+
 PATH="/usr/local/heroku/bin:$PATH"
 PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 PATH="$PATH:$HOME/.yarn/bin"
+PATH="$HOME/enjoy/super_samurai/bin:$PATH"
 
 export -U PATH
-
-# required by rbenv
-eval "$(rbenv init -)"
 
 export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR="vim"
@@ -58,10 +62,6 @@ bindkey '^?' backward-delete-char
 for function in ~/.zsh/functions/*; do
   source $function
 done
-
-##### LOAD NVM #################################################################
-export NVM_DIR="$HOME/.nvm"
-source "$(brew --prefix nvm)/nvm.sh"
 
 ##### SOURCE OTHER FILES #######################################################
 source_file ~/.zsh_propmt

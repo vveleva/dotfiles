@@ -8,14 +8,15 @@ Plugin 'gmarik/Vundle.vim'
 " Define bundles via Github repos
 Plugin 'bronson/vim-visual-star-search'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'kien/ctrlp.vim' " Ryan ditched this for pick.vim (also consider fzf.vim)
+Plugin 'calleerlandsson/pick.vim'
 Plugin 'scrooloose/nerdtree' " Ryan ditched this for vinegar.vim
-Plugin 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
 Plugin 'tomtom/tcomment_vim' " Ryan ditched this for tpope/vim-commentary
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'rglassett/vim-keyword'
 
-" syntax and langauge plugins
+" syntax and language plugins
 Plugin 'briancollins/vim-jst'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mtscout6/vim-cjsx'
@@ -37,9 +38,6 @@ Plugin 'tomtom/tlib_vim'
 
 " Interactive ruby pry compilation
 Plugin 'jpalardy/vim-slime'
-
-" LaTex plugin
-Plugin 'lervag/vimtex'
 
 call vundle#end()
 filetype on

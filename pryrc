@@ -24,7 +24,7 @@ def custom_prompt(symbol, rails_root, rails_env_prompt, obj, level)
   normal, bold = "\e[0m", "\e[1m"
 
   repo = "#{magenta}#{rails_root}" if rails_root
-  dev_prompt = "#{black}[#{bold}#{rails_env_prompt}#{normal + black}]" if rails_env_prompt
+  dev_prompt = "#{black}[#{bold + green}#{rails_env_prompt}#{normal + black}]" if rails_env_prompt
   object_and_level = " #{blue}(#{obj}#{nest_level(level)} )" unless rails_env_prompt
 
   "#{repo}#{dev_prompt}#{object_and_level} #{blue}#{symbol} #{normal}"

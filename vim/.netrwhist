@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/Lina'
 let g:netrw_dirhist_2='/Users/velina/appacademy/appacademy/w4/w4d1/routes_app/test'
 let g:netrw_dirhist_3='/Users/velina/aa_projects/TrelloClone/config'
+let g:netrw_dirhist_4='/Users/velina/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/capybara-webkit-1.11.1/lib/capybara/webkit'

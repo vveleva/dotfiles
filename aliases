@@ -5,27 +5,24 @@ alias a='atom'
 alias ack='ack --group --color'
 alias b='bundle'
 alias be='bundle exec'
-alias brspec="bin/rspec"
-alias bu='bundle update'
-alias cms='bundle exec rake db:create db:migrate db:seed'
+alias cms='bundle exec rake db:create db:migrate db:test:prepare db:seed'
 alias e="$EDITOR"
 alias grep='grep --color'
 alias gtypist="gtypist -wSstb --banner-colors=0,0,5,4 --color=2,0"
 alias ipy='ipython'
-alias ls='ls -FGha'
 alias l='ls'
 alias less='LESSOPEN="|pygmentize -g %s" less -R'
 alias ll='ls -alrth'
-alias rpry='bundle exec pry-remote'
+alias ls='ls -FGha'
 alias sl='sl -aFlc'
 alias tree='tree -C'
 alias v='vim'
 alias vi='vim'
-alias devserver='ssh -i ~/.ssh/enjoy_dev_key.pem ec2-user@bulbasaur.enjoytechnology.com'
 
 # git
 alias unwip='glog=`git log -1 --pretty=%B`; if [[ $glog == "wip" ]]; then g reset HEAD^; else echo "last commit is not wip"; fi'
 alias wip='git add -A; git commit -m wip'
+alias etl='psql -d production -h localhost -p 5403 -U etl'
 
 alias locate='mdfind -name'
 alias jumpstat="autojump --stat"
