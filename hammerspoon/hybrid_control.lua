@@ -2,7 +2,7 @@ local should_send_escape = true
 local was_ctrl_down = false
 
 local escape_key_timeout = hs.timer.delayed.new(
-  .25,
+  .2,
   function() should_send_escape = false end
 )
 

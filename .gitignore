@@ -27,4 +27,6 @@ mutt/
 .env
 vim/bundle/*
 .vim/bundle/*
-
+vim/undodir/
+.vim/undodir/
+**/vim/undodir/
