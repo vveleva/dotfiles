@@ -113,6 +113,27 @@ if executable('ag')
   " let g:ctrlp_use_caching = 0
 endif
 
+function! Replace(pattern, replacement, grep_flags, s_flags)
+  let original_grep_format=&grepformat
+  let original_buffer_id=bufnr('%')
+  set grepformat+=%f
+
+  tabnew
+  execute 'silent! grep! --files-with-matches ' . a:grep_flags . ' ' . a:pattern
+  cfdo execute '%s/\v' . a:pattern . '/' . a:replacement . '/gc' . a:s_flags . ' | write'
+  tabclose
+
+  let &grepformat=original_grep_format
+  execute 'buffer ' . original_buffer_id
+endfunction
+
+command! -nargs=+ -bar Replace call Replace(<f-args>, '', '')
+command! -nargs=+ -bar IReplace call Replace(<f-args>, '--ignore-case', 'i')
+
+
+
+
+
 " Substitute for CTRL-P
 nnoremap <C-p> :call PickFile()<CR>
 
@@ -174,8 +195,13 @@ nnoremap <D-F> :Ag<Space>
 " Copy current path into the system clipboard
 nnoremap <Leader>% :let @+ = expand("%")<CR>
 
-" Keyword.vim (thanks Ryan!)
+" Keyword.vim
 let g:keyword_command = 'Ag --fixed-strings {keyword}'
+
+" let g:ale_lint_on_text_changed = 'never'
+let g:ale_fixers = { 'javascript': ['eslint'], 'javascript.jsx': ['eslint'], 'ruby': ['rubocop'] }
+" let g:ale_fix_on_save = 1
+" let g:ale_javascript_prettier_use_local_config = 1
 
 " ##### Plugins ##############################################
 if filereadable(expand("~/.vimrc.bundles"))
@@ -187,7 +213,7 @@ if filereadable(expand("~/.vimrc.colors"))
   source ~/.vimrc.colors
 endif
 
-" ##### Local Config ########################################
+" ##### Local Config #########################################
 if filereadable(glob(".vimrc.local"))
   source .vimrc.local
 endif
