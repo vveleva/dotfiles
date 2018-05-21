@@ -1,5 +1,5 @@
 ##### GENERAL ##############################################################
-bind -t vi-copy v begin-selection
+bind -T copy-mode-vi v begin-selection
 
 # Sane scrolling
 set -g mouse on
@@ -74,11 +74,11 @@ bind -n S-Up resize-pane -U 1
 setw -g mode-keys vi # use vim keybindings in copy mode
 
 # update default binding of 'Enter' to also use copy-pipe
-unbind -t vi-copy Enter
-bind -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
+unbind -T copy-mode-vi Enter
+bind -T copy-mode-vi Enter copy-pipe "reattach-to-user-namespace pbcopy"
 
 # setup 'v' to begin selection as in Vim
 set -g status-keys vi
-bind -t vi-copy v begin-selection
-bind -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
-bind -t vi-copy MouseDragEnd1Pane copy-pipe "reattach-to-user-namespace pbcopy"
+bind -T copy-mode-vi v begin-selection
+bind -T copy-mode-vi y copy-pipe "reattach-to-user-namespace pbcopy"
+bind -T copy-mode-vi MouseDragEnd1Pane copy-pipe "reattach-to-user-namespace pbcopy"

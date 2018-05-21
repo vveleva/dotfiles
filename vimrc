@@ -53,8 +53,7 @@ set scrolloff=5
 " Allow resizing of vim windows in tmux
 set ttymouse=xterm2
 
-
-" ##### Status Line ###########################################
+" ##### STATUS LINE ############################################################
 set laststatus=2                             " Always display the status line
 set statusline=%.40t
 set statusline+=%-3.3n\                      " buffer number
@@ -66,7 +65,8 @@ set statusline+=0x%-8B                       " character value
 set statusline+=%-14(%l,%c%V%)               " line, character
 set statusline+=%<%P                         " file position
 
-" ##### Autoload commands ####################################
+
+" ##### AUTOLOAD COMMANDS ######################################################
 if !exists("*ReloadVimSettings")
   function ReloadVimSettings()
     source $MYVIMRC
@@ -76,12 +76,7 @@ if !exists("*ReloadVimSettings")
   endfunction
 endif
 
-" augroup window_resize
-"   au!
-"   au VimResized * :wincmd =
-" augroup END
-
-" autoload vimrc
+" Autoload vimrc
 augroup update_vimrc
   au!
   au BufWritePost .vimrc,.gvimrc call ReloadVimSettings()
@@ -104,15 +99,16 @@ function! SortLines() range
 endfunction
 
 if executable('ag')
-  " set grepprg=ag\ --nogroup\ --nocolor
   set grepprg=ag
 
-  " " Use Ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  " let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-  "
-  " let g:ctrlp_use_caching = 0
+  " Use Ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+  let g:ctrlp_use_caching = 0
 endif
 
+
+" Global match and replace
 function! Replace(pattern, replacement, grep_flags, s_flags)
   let original_grep_format=&grepformat
   let original_buffer_id=bufnr('%')
@@ -131,9 +127,6 @@ command! -nargs=+ -bar Replace call Replace(<f-args>, '', '')
 command! -nargs=+ -bar IReplace call Replace(<f-args>, '--ignore-case', 'i')
 
 
-
-
-
 " Substitute for CTRL-P
 nnoremap <C-p> :call PickFile()<CR>
 
@@ -144,17 +137,14 @@ let g:syntastic_javascript_checkers = ['jslint']
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 let g:markdown_fenced_languages = ['css', 'erb=eruby', 'javascript', 'js=javascript', 'ruby', 'rb=ruby', 'html']
 
-
-" ##### Keymappings ###########################################
-let mapleader = " "
-
 " Enables JSX filetype plugin for `.js` files
 let g:jsx_ext_required = 0
 
-nnoremap Q <nop>
 
-" map Tab to Esc
-" inoremap <tab> <esc>
+" ##### KEYMAPPINGS ############################################################
+let mapleader = " "
+
+nnoremap Q <nop>
 
 " insert timestamp
 :nnoremap <F5> "=strftime("%c")<CR>P
@@ -184,7 +174,6 @@ nnoremap <Leader>k :Ag <C-R><C-W><CR>
 vnoremap <Leader>k y<CR>:Ag <C-R>"<CR>
 
 " Quickly open vim
-" nnoremap <Leader>v :tabedit $MYVIMRC<CR>
 nnoremap <Leader>v :vsplit $MYVIMRC<CR>
 
 " Hotkey for NERDTree toggle
@@ -203,17 +192,17 @@ let g:ale_fixers = { 'javascript': ['eslint'], 'javascript.jsx': ['eslint'], 'ru
 " let g:ale_fix_on_save = 1
 " let g:ale_javascript_prettier_use_local_config = 1
 
-" ##### Plugins ##############################################
+" ##### PLUGINS ################################################################
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
-" ##### Color Scheme #########################################
+" ##### COLOR SCHEME ###########################################################
 if filereadable(expand("~/.vimrc.colors"))
   source ~/.vimrc.colors
 endif
 
-" ##### Local Config #########################################
+" ##### LOCAL CONFIG ###########################################################
 if filereadable(glob(".vimrc.local"))
   source .vimrc.local
 endif

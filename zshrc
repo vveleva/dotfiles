@@ -51,7 +51,7 @@ HISTSIZE=999999999999999999 # number of lines in the HISTFILE
 SAVEHIST=999999999999999999 # number of lines to save in HISTFILE
 
 # Use vim as a manpager (instead of less)
-export MANPAGER="col -bx | vim -MRc 'set ft=man fdm=indent nonu nornu' -"
+# export MANPAGER="col -bx | vim -MRc 'set ft=man fdm=indent nonu nornu' -"
 
 export EDITOR="vim"
 export VISUAL="vim"
@@ -61,6 +61,9 @@ bindkey -v
 bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line
 bindkey '^R' history-incremental-search-backward
+bindkey -M viins '^S' history-incremental-search-forward # TODO: change to ctrl-shift-r
+
+bindkey -v '^?' backward-delete-char
 
 ##### LOAD AUTOJUMP ############################################################
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
