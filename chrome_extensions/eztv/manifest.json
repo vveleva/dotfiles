@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Eztv",
+  "version": "1.2",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://eztv.it/*",
+        "*://eztv.ag/*",
+        "*://ezrss.it/*",
+        "*://www.ezrss.it/*",
+        "*://eztv.ch/*",
+        "*://ezrss.ch/*",
+        "*://www.ezrss.ch/*"
+      ],
+      "css": ["highlight.css", "eztv.css"],
+      "js": ["jquery-1.11.1.min.js", "jquery.highlight-4.js", "test.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "eztv.css", "highlight.css", "test.js", "jquery-1.11.1.min.js", "jquery.highlight-4.js"]
+}

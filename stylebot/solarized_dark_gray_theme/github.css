@@ -1,0 +1,17 @@
+.repohead.experiment-repo-nav {
+  background-color: #1e2b30;
+  color: #586e75;
+}
+
+.Header {
+    background-color: #1e2b30;
+}
+
+.header {
+  background-color: #263338;
+  border-bottom-color: #263338;
+}
+
+body, .selected.reponav-item {
+    background-color: #f5f5f5;
+}

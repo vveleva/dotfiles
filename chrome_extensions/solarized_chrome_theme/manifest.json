@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "theme": {
+    "images": {
+      "theme_frame": "images\/theme_frame.png",
+      "theme_toolbar": "images\/theme_toolbar.png",
+      "theme_tab_background": "images\/theme_tab_background.png"
+    },
+    "colors": {
+      "frame": [0, 40, 51],
+      "toolbar": [223, 223, 223],
+      "tab_text": [223, 232, 238],
+      "tab_background_text": [108, 110, 198],
+      "bookmark_text": [38, 139, 210],
+      "ntp_background": [0, 53, 65],
+      "ntp_text": [223, 232, 238],
+      "button_background": [16, 69, 81, 1]
+    },
+    "tints": {
+      "buttons": [0, 0, 0.5]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom",
+      "ntp_background_repeat": "no-repeat"
+    }
+  },
+  "name": "vvv_solarized_dark",
+  "version": "1",
+  "description": ""
+}
