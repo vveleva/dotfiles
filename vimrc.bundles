@@ -13,6 +13,7 @@ Plugin 'scrooloose/nerdtree' " Ryan ditched this for vinegar.vim
 Plugin 'w0rp/ale'
 Plugin 'tomtom/tcomment_vim' " Ryan ditched this for tpope/vim-commentary
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb' " Enables :Gbrowse from fugitive.vim to open GitHub URLs
 Plugin 'tpope/vim-surround'
 Plugin 'rglassett/vim-keyword'
 

@@ -28,7 +28,7 @@ eval "$(rbenv init -)"
 PATH="/usr/local/heroku/bin:$PATH"
 PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 PATH="$PATH:$HOME/.yarn/bin"
-PATH="$HOME/enjoy/super_samurai/bin:$PATH"
+PATH="$HOME/voy/api/bin:$PATH"
 
 export -U PATH
 export MANPATH="/usr/local/man:$MANPATH"

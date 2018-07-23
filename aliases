@@ -18,8 +18,10 @@ alias sl='sl -aFlc'
 alias tree='tree -C'
 alias v='vim'
 alias vi='vim'
-alias debug='less ~/debug_list'
+alias debug='less ~/Dropbox/debug_list'
 alias food='v ~/Dropbox/food_diary/`date +%Y-%m-%d`'
+alias diary='v ~/Dropbox/diary/`date +%Y-%m-%d`'
+alias notes='v ~/Dropbox/notes'
 
 # git
 alias unwip='glog=`git log -1 --pretty=%B`; if [[ $glog == "wip" ]]; then g reset HEAD^; else echo "last commit is not wip"; fi'

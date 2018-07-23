@@ -37,13 +37,13 @@
 [difftool]
   prompt = false
 [user]
-	email = vvveleva@gmail.com
-	name = Velina V Veleva
+  email = vvveleva@gmail.com
+  name = Velina V Veleva
 [mergetool]
-	keepBackup = false
+  keepBackup = false
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
