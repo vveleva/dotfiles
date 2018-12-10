@@ -1,57 +1,47 @@
-set nocompatible
+" set nocompatible
 filetype plugin indent on
 runtime macros/matchit.vim
 
 syntax on " Enable syntax highlighting.
 
 set autoindent                    " Next-line indentation; keep same as smartindent
-set backspace=2                   " Backspace deletes like most programs in insert mode
+set backspace=indent,eol,start    " Backspace deletes like most programs in insert mode
+set cursorline                    " Highlight currently-selected line
 set diffopt+=vertical             " Use vertical splits in Gdiff
 set encoding=utf-8                " use UTF-8.
+set expandtab                     " Convert tab characters to spaces
 set fillchars+=vert:│             " custom character for vertical split separator
 set hlsearch                      " Highlight search results
 set ignorecase                    " Ignore case when searching.
 set incsearch                     " Search as you type.
 set lazyredraw                    " Boost performance a little bit
+set list listchars=tab:»·,trail:·,nbsp:· " Display extra whitespace
 set mouse+=niv                    " Allow scrolling and mouse selecting
 set nojoinspaces                  " One space after periods when joining lines
 set noswapfile                    " Disable swapfiles
 set ruler                         " Show line number, cursor position.
+set scrolloff=5                   " Number of lines to keep above and below the cursor
+set shiftround                    " Always indent to a multiple of shiftwidth
+set shiftwidth=0                  " Use the value of 'tabstop' for autoindent
 set showcmd                       " Display incomplete commands.
 set showmode                      " Show editing mode
 set smartcase                     " Overrides ignorecase if pattern contains caps
 set splitbelow splitright         " Open splits to the right and bottom
+set tabstop=2                     " Use 2 spaces for tabs
 set timeoutlen=1000 ttimeoutlen=0 " Eliminate delay on ESC
+set ttymouse=xterm2               " Allow resizing of vim windows in tmux
 set undodir=$HOME/.vim/undodir    " Store undofiles in $HOME/.vim/undodir
 set undofile                      " Record undo history after leaving buffer
 set visualbell                    " Error bells are displayed visually.
 set wildmenu                      " Show autocomplete menus.
 
-set cursorline                    " Highlight currently-selected line
-set cursorcolumn
-set number relativenumber         " Hybrid line numbers
-
-" Soft tabs, 2 spaces
-set shiftwidth=2
-set tabstop=2
-set expandtab
-set shiftround
-
 " Make it obvious where 100 char is
 set colorcolumn=+1
 set formatoptions+=w
+set number relativenumber         " Hybrid line numbers
 set textwidth=100
 set wrapmargin=2
 
-" Display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
-
-" Use zz, zt, zb to adjust screen position
-" Number of lines to keep above and below the cursor
-set scrolloff=5
-
-" Allow resizing of vim windows in tmux
-set ttymouse=xterm2
 
 " ##### STATUS LINE ############################################################
 set laststatus=2                             " Always display the status line
@@ -74,6 +64,13 @@ if !exists("*ReloadVimSettings")
       source $MYGVIMRC
     endif
   endfunction
+endif
+
+" Use syntax highlighting and color scheme when possible
+if (&t_Co > 2 || has("gui_running"))
+  if !exists("syntax_on")
+    syntax on
+  endif
 endif
 
 " Autoload vimrc
@@ -127,10 +124,6 @@ command! -nargs=+ -bar Replace call Replace(<f-args>, '', '')
 command! -nargs=+ -bar IReplace call Replace(<f-args>, '--ignore-case', 'i')
 
 
-" Substitute for CTRL-P
-nnoremap <C-p> :call PickFile()<CR>
-
-command! -nargs=+ -complete=file -bar Ag silent! grep! <args> | redraw! | cwindow
 
 let g:slime_target = "tmux" " Setting up vim_slime to use tmux sessions
 let g:syntastic_javascript_checkers = ['jslint']
@@ -186,6 +179,11 @@ nnoremap <Leader>% :let @+ = expand("%")<CR>
 
 " Keyword.vim
 let g:keyword_command = 'Ag --fixed-strings {keyword}'
+
+" Substitute for CTRL-P
+nnoremap <C-p> :call PickFile()<CR>
+
+command! -nargs=+ -complete=file -bar Ag silent! grep! <args> | redraw! | cwindow
 
 " let g:ale_lint_on_text_changed = 'never'
 let g:ale_fixers = { 'javascript': ['eslint'], 'javascript.jsx': ['eslint'], 'ruby': ['rubocop'] }

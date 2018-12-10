@@ -71,6 +71,7 @@ brew cask install slack
 brew cask install karabiner
 
 brew tap thoughtbot/formulae
+brew install pick
 brew install rcm
 
 brew cleanup
