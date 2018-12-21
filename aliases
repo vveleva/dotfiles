@@ -22,6 +22,8 @@ alias debug='less ~/Dropbox/debug_list'
 alias food='v ~/Dropbox/food_diary/`date +%Y-%m-%d`'
 alias diary='v ~/Dropbox/diary/`date +%Y-%m-%d`'
 alias notes='v ~/Dropbox/notes'
+getip() { dig +short "$@" @resolver1.opendns.com }
+alias getmyip='getip myip.opendns.com'
 
 # git
 alias unwip='glog=`git log -1 --pretty=%B`; if [[ $glog == "wip" ]]; then g reset HEAD^; else echo "last commit is not wip"; fi'
