@@ -18,7 +18,8 @@ done
 
 ##### LOAD NVM #################################################################
 export NVM_DIR="$HOME/.nvm"
-source "$(brew --prefix nvm)/nvm.sh"
+# source "$(brew --prefix nvm)/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 ##### SETUP RBENV PATH #########################################################
 PATH="$HOME/.rbenv/bin:$PATH"
@@ -29,6 +30,7 @@ PATH="/usr/local/heroku/bin:$PATH"
 PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 PATH="$PATH:$HOME/.yarn/bin"
 PATH="$HOME/voy/api/bin:$PATH"
+PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
 
 export -U PATH
 export MANPATH="/usr/local/man:$MANPATH"
@@ -72,3 +74,6 @@ bindkey -v '^?' backward-delete-char
 source_file ~/.aliases
 source_file ~/.aliases.local
 source_file ~/.zshrc.local
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+fpath=(/usr/local/share/zsh-completions $fpath)

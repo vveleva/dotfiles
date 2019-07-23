@@ -1,4 +1,5 @@
 [alias]
+	jira = echo
   a = add
   aa = add -A
   b = branch
@@ -46,4 +47,4 @@
   smudge = git-lfs smudge %f
   required = true
 [credential]
-  helper = osxkeychain
+	helper = osxkeychain

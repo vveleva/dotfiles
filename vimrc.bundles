@@ -23,6 +23,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'mtscout6/vim-cjsx'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
+Plug 'suan/vim-instant-markdown'
 
 " css color highlighting
 Plug 'skammer/vim-css-color'
@@ -32,10 +33,10 @@ Plug 'vim-scripts/hexHighlight.vim'
 Plug 'altercation/vim-colors-solarized'
 
 " Snipmate engine for Textmate-style snippets
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
-Plug 'tomtom/tlib_vim'
+" Plug 'MarcWeber/vim-addon-mw-utils'
+" Plug 'garbas/vim-snipmate'
+" Plug 'honza/vim-snippets'
+" Plug 'tomtom/tlib_vim'
 
 " Interactive ruby pry compilation
 Plug 'jpalardy/vim-slime'
