@@ -32,12 +32,6 @@ Plug 'vim-scripts/hexHighlight.vim'
 " Color schemes
 Plug 'altercation/vim-colors-solarized'
 
-" Snipmate engine for Textmate-style snippets
-" Plug 'MarcWeber/vim-addon-mw-utils'
-" Plug 'garbas/vim-snipmate'
-" Plug 'honza/vim-snippets'
-" Plug 'tomtom/tlib_vim'
-
 " Interactive ruby pry compilation
 Plug 'jpalardy/vim-slime'
 

@@ -18,11 +18,16 @@ alias sl='sl -aFlc'
 alias tree='tree -C'
 alias v='vim'
 alias vi='vim'
+
 alias debug='less ~/Dropbox/debug_list'
 alias food='v ~/Dropbox/food_diary/`date +%Y-%m-%d`'
 alias diary='v ~/Dropbox/diary/`date +%Y-%m-%d`'
 alias notes='v ~/Dropbox/notes'
 alias wnotes='v ~/Dropbox/work_notes'
+alias addresses='v ~/Dropbox/addresses.txt'
+
+alias standup='v ~/Google\ Drive/work_standup/`date +%Y`'
+
 getip() { dig +short "$@" @resolver1.opendns.com }
 alias getmyip='getip myip.opendns.com'
 
