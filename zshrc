@@ -54,8 +54,8 @@ SAVEHIST=999999999999999999 # number of lines to save in HISTFILE
 
 # Use vim as a manpager (instead of less)
 # export MANPAGER="col -bx | vim -MRc 'set ft=man fdm=indent nonu nornu' -"
+export MANPAGER="col -bx | vim -MRc 'set ft=man ts=2 nolist nomod' -"
 
-export EDITOR="vim"
 export VISUAL="vim"
 export EDITOR=$VISUAL
 

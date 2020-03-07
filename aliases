@@ -1,5 +1,3 @@
-alias terminal_colors='for x in 0 1 4 5 7 8; do for i in `seq 30 37`; do for a in `seq 40 47`; do echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "; done; echo; done; done; echo "";'
-
 alias ...='cd ../..'
 alias a='atom'
 alias ack='ack --group --color'
@@ -24,15 +22,21 @@ alias food='v ~/Dropbox/food_diary/`date +%Y-%m-%d`'
 alias diary='v ~/Dropbox/diary/`date +%Y-%m-%d`'
 alias notes='v ~/Dropbox/notes'
 alias wnotes='v ~/Dropbox/work_notes'
+alias taiwan='v ~/Dropbox/taiwan'
 alias addresses='v ~/Dropbox/addresses.txt'
 
-alias standup='v ~/Google\ Drive/work_standup/`date +%Y`'
+alias standup='v ~/Google\ Drive/work_standup/`+%Y`'
 
 getip() { dig +short "$@" @resolver1.opendns.com }
 alias getmyip='getip myip.opendns.com'
 
 # git
-alias unwip='glog=`git log -1 --pretty=%B`; if [[ $glog == "wip" ]]; then g reset HEAD^; else echo "last commit is not wip"; fi'
+unwip() {
+  glog=`git log -1 --pretty=%B`;
+  if [[ $glog == "wip" ]]; then g reset HEAD^;
+  else echo "last commit is not wip";
+  fi
+}
 alias wip='git add -A; git commit -m wip'
 alias etl='psql -d production -h localhost -p 5403 -U etl'
 
@@ -60,3 +64,28 @@ alias ts='tmux new-session -s'
 alias tl='tmux list-sessions'
 alias tksv='tmux kill-server'
 alias tkss='tmux kill-session -t'
+
+terminal_colors() {
+  for x in 0 1 4 5 7 8;
+    do for i in `seq 30 37`;
+      do for a in `seq 40 47`;
+        do echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "; done;
+        echo;
+      done;
+    done;
+  echo "";
+}
+
+colors() { awk 'BEGIN{
+  s="/\\/\\/\\/\\/\\"; s=s s s s s s s s s s s s s s s s s s s s s s s;
+  for (colnum = 0; colnum<256; colnum++) {
+    r = 255-(colnum * 255 / 255);
+    g = (colnum * 510 / 255);
+    b = (colnum * 255 / 255);
+    if (g > 255) g = 510 - g;
+    printf "\033[48;2;%d;%d;%dm", r,g,b;
+    printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;
+    printf "%s\033[0m", substr(s,colnum+1,1);
+  }
+  printf "\n";
+}' }

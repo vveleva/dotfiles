@@ -18,11 +18,10 @@ set -g status-left "#[fg=$true_black, bg=green] #{session_name} #[fg=green, bg=b
 
 year="#[fg=white, bg=$gray] %Y-%m-%d"
 time="#[fg=white]%l:%M %p"
-time_stats="$gray_style$l_arrow$year #[fg=green] $time"
+time_stats="$gray_style$l_arrow$year #[fg=green]  $time "
 laptop_stat="#[fg=green]$l_arrow#[fg=$true_black, bg=green] #h" # eg. vvvmbp13
-battery_stat="#[fg=green]#{battery_status_fg}$l_arrow#{battery_status_bg}#[fg=$true_black] #{battery_percentage} "
 
-set -g status-right "$time_stats $laptop_stat $battery_stat"
+set -g status-right "$time_stats $laptop_stat "
 
 
 # color for status bar

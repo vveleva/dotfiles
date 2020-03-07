@@ -2,7 +2,7 @@
 
 # TODO: Write functions to do this stuff conditionally
 
-RUBY_VERSION=2.2.2
+RUBY_VERSION=2.6.5
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
@@ -21,7 +21,6 @@ brew install rbenv
 brew install readline
 brew install reattach-to-user-namespace
 brew install ruby-build
-brew install sqlite
 brew install the_silver_searcher
 brew install tmux
 brew install vim
@@ -62,13 +61,9 @@ rbenv rehash
 brew install caskroom/cask/brew-cask
 
 brew cask install dropbox
-brew cask install flux
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install slack
-
-# http://www.economyofeffort.com/2014/08/11/beyond-ctrl-remap-make-that-caps-lock-key-useful/
-brew cask install karabiner
 
 brew tap thoughtbot/formulae
 brew install pick
