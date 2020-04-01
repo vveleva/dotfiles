@@ -1,0 +1,120 @@
+#stylebot-container .stylebot-control-set {
+    margin: 2px 0;
+}
+
+#stylebot-container * {
+    box-shadow: none;
+    text-shadow: none;
+    border-color: #0e1b20;
+    outline: none;
+}
+
+#stylebot-container .stylebot-label,
+#stylebot-header * {
+    color: #62787a;
+}
+
+#stylebot-container .stylebot-accordion,
+#stylebot-controls,
+#stylebot,
+#stylebot-header {
+    background-color: #2e3b40;
+    background-image: none;
+}
+
+a.stylebot-accordion-header,
+a.stylebot-accordion-header:hover {
+    color: #62787a;
+    background: none;
+}
+
+a.stylebot-accordion-active,
+a.stylebot-accordion-active:hover {
+    color: #62787a;
+    background: -webkit-gradient(linear, 0% 0%, 50% 100%, from(#1e2b30), to(#2e3b40));
+}
+
+button.stylebot-button, button.stylebot-button:hover {
+    background-color: #1e2b30;
+    background-image: none;
+    color: #a2b8ba;
+}
+
+button.stylebot-button-selected,
+button.stylebot-button-selected:hover,
+button.stylebot-button-selected:hover:not(:disabled) {
+    background-color: #08f;
+    background-image: none;
+    color: #dfe8ee;
+}
+
+.stylebot-selectize-control.single .stylebot-selectize-input,
+.stylebot-selectize-dropdown,
+.stylebot-selectize-dropdown:before,
+.stylebot-selectize-control.focus {
+    background-image: none;
+    background-color: #1e2b30;
+    color: #dfe8ee;
+}
+
+.stylebot-selectize-dropdown .active {
+    background-color: #1e2b30;
+}
+
+#stylebot-container input[type="text"].stylebot-textfield,
+.stylebot-colorselector {
+    background-color: #1e2b30;
+    color: #62787a;
+}
+
+#stylebot-margin-top, #stylebot-margin-right, #stylebot-margin-left, #stylebot-margin-bottom, #stylebot-margin,
+#stylebot-padding-top, #stylebot-padding-right, #stylebot-padding-left, #stylebot-padding-bottom, #stylebot-padding,
+#stylebot-border-top-width, #stylebot-border-right-width, #stylebot-border-left-width, #stylebot-border-bottom-width, #stylebot-border-width {
+    min-width: 15px;
+    margin-left: 0;
+}
+
+#stylebot-margin-left, #stylebot-padding-left, #stylebot-border-left-width {
+    left: 9px;
+}
+
+#stylebot-margin-right, #stylebot-padding-right, #stylebot-border-right-width {
+    left: 55px;
+}
+
+/* css mode */
+
+#stylebot-container .ace_line, #stylebot-container .ace_variable {
+    color: #08f;
+}
+
+#stylebot-container .ace-dawn .ace_support {
+    color: #b58900;
+}
+
+#stylebot-container .ace-dawn .ace_constant {
+    color: #2aa197;
+}
+
+#stylebot-container .ace-dawn .ace_string {
+    color: #cb4a16;
+}
+
+#stylebot-container .ace-dawn .ace_comment {
+    color: #586d74;
+}
+
+.ace-dawn .ace_scroller {
+    background-color: #1e2b30;
+}
+
+#stylebot-modal {
+    background-color: #2e3b40;
+    color: #a2b8ba;
+    border: none;
+}
+
+#stylebot-container .ace_editor {
+    border-color: #2e3b40;
+}
+

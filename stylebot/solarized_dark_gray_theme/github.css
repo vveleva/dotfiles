@@ -1,17 +1,555 @@
-.repohead.experiment-repo-nav {
-  background-color: #1e2b30;
-  color: #586e75;
+body, .application-main, .diffbar, .pr-toolbar.is-stuck, .gh-header, .Header {
+    background-color: #1e2b30;
+    color: #6a737d;
 }
 
-.Header {
+/* bg colors START */
+
+.bg-gray-light {
+    background-color: #192327;
+    color: #6a737d;
+}
+
+.bg-white {
     background-color: #1e2b30;
 }
 
-.header {
-  background-color: #263338;
-  border-bottom-color: #263338;
+.bg-gray {
+    background-color: #2e3b40;
 }
 
-body, .selected.reponav-item {
-    background-color: #f5f5f5;
+.bg-blue-2 {
+    background-color: #6c6ec6;
 }
+
+.link-gray-dark {
+    color: #586d74;
+}
+
+.bg-yellow-light {
+    background-color: #b58900;
+    /* yellow */
+}
+
+/* bg colors END */
+
+/* border colors START */
+
+.border-blue-light {
+    border-color: #6c6ec6;
+}
+
+.border-gray-dark, .border {
+    border-color: #0e1b20;
+}
+
+.border-bottom {
+    border-color: #0e1b20;
+}
+
+.border-top {
+    border-color: #1e2b30;
+}
+
+/* border colors END */
+
+.toolbar-shadow {
+    background: none;
+}
+
+.tabnav-tab.selected, .tabnav-tab[aria-current], .tabnav-tab[aria-selected=true] {
+    background-color: #0e1b20;
+    border-color: #1e2b30;
+    color: #6a737d;
+}
+
+.reponav-item.selected {
+    border-right-color: #586d74;
+    border-left-color: #586d74;
+    background-color: #1e2b30;
+    color: #586d74;
+}
+
+.reponav-item:hover {
+    color: #aab3cd;
+}
+
+.review-comment {
+    color: #6a737d;
+}
+
+.btn, .social-count {
+    background-color: #2e3b40;
+    border-color: #0e1b20;
+    background-image: none;
+    color: #aab3cd;
+}
+
+.tabnav-pr, .review-thread-reply, .pagehead {
+    border-color: #1e2b30;
+}
+
+.diff-table tbody, .diff-table .empty-cell, .blob-expanded .blob-num, .blob-expanded .blob-code, .blob-code-hunk, .file-header, .review-thread-reply, .previewable-comment-form .comment-form-head.tabnav, .drag-and-drop {
+    background-color: #1e2b30;
+}
+
+.input-contrast {
+    background-color: #1e2b30;
+    color: #aab3cd;
+}
+
+.file-diff-split .blob-code+.blob-num, .diff-table tr:not(:last-child) .line-comments, #files .file, .blob-expanded+tr:not(.blob-expanded) .blob-code, .blob-expanded+tr:not(.blob-expanded) .blob-num, .blob-expanded .blob-num-hunk, tr:not(.blob-expanded)+.blob-expanded .blob-code, tr:not(.blob-expanded)+.blob-expanded .blob-num, .file-header, .inline-comment-form, .upload-enabled textarea, .drag-and-drop, .previewable-comment-form .comment-body {
+    border-color: #0e1b20;
+}
+
+.form-control, .form-select {
+    background-color: #192327;
+}
+
+.markdown-body .highlight pre, .markdown-body pre {
+    background-color: #192327;
+}
+
+.blob-num, .blob-code-inner, .blob-code-marker, .pl-en, .pl-sre, .pl-kos, .x, .pl-s {
+    color: #839495;
+}
+
+.pl-k {
+    color: #dc312e;
+    /* red */
+}
+
+.pl-ent, .pl-v {
+    color: #b58900;
+    /* yellow */
+}
+
+.pl-smi {
+    color: #6c6ec6;
+    /* purple */
+}
+
+.pl-pds, .pl-c1, .pl-s1 {
+    color: #2aa197;
+    /* seagreen */
+}
+
+/* code changes START */
+
+.code-review.blob-code.blob-code-deletion, .blob-code-deletion {
+    background-color: #382626;
+}
+
+.blob-num-deletion, .blob-code-deletion .x {
+    background-color: #5f3c40;
+    color: white;
+}
+
+.code-review.blob-code.blob-code-addition, .blob-code-addition {
+    background-color: #263835;
+}
+
+.blob-num-addition, .blob-code-addition .x {
+    background-color: #364f3d;
+    color: white;
+}
+
+/* code changes END */
+
+/* diffstat blocks START */
+
+.diffstat-block-neutral {
+    background-color: #263338;
+}
+
+.diffstat-block-deleted {
+    background-color: #dc312e;
+}
+
+.text-red {
+    color: #dc312e;
+}
+
+.diffstat-block-added {
+    background-color: #859901;
+}
+
+.text-green {
+    color: #859901;
+}
+
+/* diffstat blocks END */
+
+.commit-ref a {
+    color: #1e2b30;
+}
+
+.commit-ref {
+    background-color: #2aa197;
+}
+
+img[alt="@vveleva"] {
+    background-color: #d33582;
+    border-radius: 50%;
+    padding-top: 1px;
+    box-shadow: #d33582 0 0 25px
+;
+}
+
+.State--purple {
+    background-color: #6f42c1;
+}
+
+.State--green {
+    background-color: #859901;
+}
+
+.State--red {
+    background-color: #dc312e;
+}
+
+.diff-table tbody tr:hover > *:not(.line-comments) {
+    background-color: #263338;
+    color: white;
+}
+
+.blob-num-expandable, .blob-num-hunk {
+    background-color: #6c6ec6;
+}
+
+.mr-1:not(.bg-blue-2), .Progress {
+    background-color: inherit;
+}
+
+kbd {
+    background-color: #263338;
+    color: white;
+    box-shadow: none;
+    border-color: #0e0b10;
+}
+
+.blob-num-expandable .directional-expander, .mr-1 {
+    color: #0e1b20;
+}
+
+input[type="checkbox"]:not(:checked) {
+    opacity: 0.5;
+}
+
+.file-header {
+    background-color: #192327;
+}
+
+.timeline-comment-header {
+    background-color: #192327;
+    border-color: #192327;
+}
+
+.merge-status-item {
+    background-color: #0e0b10;
+    border-color: #192327;
+}
+
+.blob-code-hunk {
+    background-color: #1e2b30;
+}
+
+.diff-table tbody tr:hover > td.blob-code-hunk {
+    background-color: #1e2b30;
+    color: white;
+}
+
+/* git commits page START */
+
+.commits-list-item+.commits-list-item, .table-list-bordered .table-list-cell:first-child, .table-list-cell, .table-list-bordered {
+    border-color: #0e1b20;
+}
+
+.commits-list-item {
+    background-color: #1e2b30;
+}
+
+.commit-group-title .octicon-git-commit {
+    background-color: #0e1b20;
+}
+
+.commits-list-item.navigation-focus, .commits-list-item[aria-selected=true] {
+    background-color: #263338;
+}
+
+/* git commits page END */
+
+/* git pull description START */
+
+.timeline-comment {
+    background-color: #1e2b30;
+    border-color: #1e2b30;
+}
+
+.AvatarStack-body, .AvatarStack-body .avatar, .thread-subscription-status, .discussion-timeline-actions, .gh-header .gh-header-sticky.is-stuck+.gh-header-shadow {
+    background-color: #0e1b20;
+}
+
+.timeline-comment.current-user .timeline-comment-header, .branch-action-body .merge-branch-form, .branch-action-body .merge-message, .branch-action-item {
+    background-color: #192327;
+    border-color: #192327;
+}
+
+.timeline-comment-wrapper, .discussion-timeline-actions {
+    border-color: #0e1b20;
+}
+
+.timeline-comment, .timeline-comment.current-user, .branch-action-item, .mergeability-details, .merge-status-list, .discussion-sidebar-item+.discussion-sidebar-item {
+    border-color: #192327;
+}
+
+.previewable-comment-form .comment-form-head.tabnav {
+    background-color: #192327;
+}
+
+.previewable-comment-form .tabnav, .previewable-comment-form .tabnav-tab[aria-selected=true] {
+    border-color: #293327;
+}
+
+.previewable-comment-form .tabnav-tab[aria-selected=true] {
+    background-color: #1e2b30;
+}
+
+.text-small .mr-1 {
+    color: #6c6ec6;
+    background-color: inherit;
+}
+
+/* pull requets START */
+
+.Box, .Box-row, .Box-header, .Box--responsive {
+    border-color: #0e1b20;
+}
+
+.Box, .Box > div {
+    background-color: #1e2b30;
+}
+
+.Box-header {
+    background-color: #1e2b30;
+}
+
+.Box-row--focus-gray.navigation-focus {
+    background-color: #192327;
+}
+
+.repository-content .form-control, .form-select, .repository-content .subnav-item {
+    border-color: #1e2b30;
+}
+
+/* pull requets END */
+
+.TimelineItem .file {
+    border-color: #0e1b20;
+}
+
+td.d-block.comment-body.markdown-body.js-comment-body p, .comment-body, .text-emphasized {
+    color: #9ab;
+}
+
+.TimelineItem-break {
+    background-color: #0e1b20;
+    border: none;
+}
+
+.pull-request-review-menu .form-actions {
+    background-color: #1e2b30;
+}
+
+.pull-request-review-menu, .repository-content .form-control {
+    border-color: #0e1b20;
+}
+
+td.d-block.comment-body.markdown-body.js-comment-body {
+    color: white;
+}
+
+div.Box-body {
+    color: white;
+}
+
+div.Box-header {
+    color: white;
+}
+
+.full-commit .commit-meta {
+    background-color: #1e2b30;
+}
+
+.full-commit {
+    border-color: #0e1b20;
+    background-color: #192327;
+}
+
+.full-commit a {
+    color: #08f;
+}
+
+.full-commit p.commit-title {
+    color: #586d74;
+}
+
+/* NEW STYLE STARTS HERE */
+
+.reponav-item .octicon, .btn-link.text-gray .octicon {
+    color: rgba(150,150,255,.35);
+}
+
+.State .octicon, .commit-ref, .TimelineItem-badge .octicon, .branch-action-item-icon.completeness-indicator .octicon, .branch-action-icon .octicon {
+    color: #0e1b20;
+}
+
+.TimelineItem-badge:not(.bg-green), .TimelineItem:before {
+    background-color: #586d74;
+    /*  terminal brightgreen */
+}
+
+.TimelineItem-badge {
+    border-color: #586d74;
+}
+
+.tabnav-pr, .review-thread-reply, .pagehead , .tabnav-tab.selected {
+    border-color: #586d74;
+}
+
+.previewable-comment-form .tabnav-tab[aria-selected=true], .previewable-comment-form .tabnav, .review-thread-reply, .review-comment .is-comment-editing {
+    border-color: #0e1b20;
+}
+
+.tabnav-tab.selected, .review-thread-reply .inline-comment-form, .discussion-timeline-actions, .review-summary-form-wrapper, .review-comment .is-comment-editing, .TimelineItem-break {
+    background-color: #1e2b30;
+}
+
+.discussion-timeline-actions, .timeline-comment-wrapper, .comment-reactions.has-reactions {
+    border-color: #1e2b30;
+}
+
+.ellipsis-expander {
+    background-color: #263338;
+}
+
+.js-header-wrapper, .pr-toolbar.is-stuck {
+    border-bottom: 1px solid #0e1b20;
+}
+
+a.user-mention {
+    color: #6c6ec6;
+}
+
+.js-toggle-user-reviewed-file-form .js-reviewed-toggle:not(.bg-blue-2) {
+    background-color: #2e3b40;
+}
+
+.file-diff-split .blob-code+.blob-num {
+    border-color: #5e5e86;
+    /* gray purple */
+}
+
+.blob-num {
+    color: #5e5e86;
+    /* gray purple */
+}
+
+.timeline-comment-label.bg-yellow-light {
+    color: #0e1b20;
+}
+
+h4.merge-branch-heading {
+    color: white;
+}
+
+.comment-reactions .user-has-reacted {
+    background-color: #192327;
+    border-color: #1e2b30;
+}
+
+.branch-action-state-merged .branch-action-icon {
+    background-color: #6f42c1;
+}
+
+/* caret comments wrappers START */
+
+.branch-action-body, .thread-subscription-status {
+    background-color: #1e2b30;
+}
+
+.js-diff-progressive-container .commit, .js-diff-progressive-container .file, .js-line-comments, .commit-group, .review-comment .is-comment-editing, .TimelineItem-badge, .TimelineItem-badge:not(.bg-green), .TimelineItem:before, .branch-action-body, .timeline-comment--caret {
+    box-shadow: rgba(0, 10, 10, .5) 0 0 5px;
+}
+
+/*  terminal green */
+
+.branch-action-state-dirty .branch-action-body {
+    border: 1px solid #586d74;
+}
+
+.branch-action-state-dirty .branch-action-body:before, .branch-action-state-dirty .branch-action-body:after {
+    border-right-color: #586d74;
+}
+
+/* purple */
+
+.branch-action-state-merged .branch-action-body:before, .branch-action-state-merged .branch-action-body:after {
+    border-right-color: #6f42c1;
+}
+
+.branch-action-state-merged .branch-action-body {
+    border: 1px solid #6f42c1;
+}
+
+/*  terminal brightgreen */
+
+.timeline-comment--caret:before, .timeline-comment--caret:after {
+    border-right-color: #586d74;
+}
+
+.timeline-comment--caret, .timeline-comment--caret.current-user {
+    border: 1px solid #586d74;
+}
+
+/* green */
+
+.branch-action-state-clean .branch-action-icon, .completeness-indicator-success {
+    background-color: #859901;
+}
+
+.branch-action-state-clean .branch-action-body:before, .branch-action-state-clean .branch-action-body:after {
+    border-right-color: #859901;
+}
+
+.branch-action-state-clean .branch-action-body {
+    border: 1px solid #dbab09;
+}
+
+/* yellow */
+
+.branch-action-state-unstable .branch-action-body {
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5), inset 0 0 10px rgba(181, 137, 0, .5);
+    background-color: #192327;
+}
+
+.branch-action-state-unstable .branch-action-body:before, .branch-action-state-unstable .branch-action-body:after {
+    border-right-color: #b58900;
+}
+
+.branch-action-state-unstable .branch-action-icon {
+    background-color: #b58900;
+}
+
+.tabnav-tab.selected, .review-thread-reply .inline-comment-form, .discussion-timeline-actions, .review-summary-form-wrapper, .review-comment .is-comment-editing, .TimelineItem-break, .pagination-loader-container {
+    background-color: #1e2b30;
+}
+
+.flash-warn {
+    background-color: orange;
+}
+
+.branch-action-body .branch-action-item, .branch-action-body .merge-message {
+    background-color: inherit;
+}
+
