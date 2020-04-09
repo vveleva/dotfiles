@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "VVV Solarized CSS",
+  "version": "1.1",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://eztv.it/*",
+        "*://mail.google.com/*"
+      ],
+      "css": ["gmail.css"],
+      "js": ["jquery-1.11.1.min.js", "jquery.highlight-4.js", "test.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "gmail.css", "test.js", "jquery-1.11.1.min.js", "jquery.highlight-4.js"]
+}

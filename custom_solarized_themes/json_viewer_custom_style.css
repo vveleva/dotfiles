@@ -1,0 +1,38 @@
+.CodeMirror {
+  font-family: monaco, Consolas, Menlo, Courier, monospace;
+  font-size: 12px;
+  line-height: 1.2em;
+}
+
+.CodeMirror-line, .CodeMirror-line>span, .CodeMirror-line>span>span {
+  color: #dc312e !important; /* red */
+}
+
+.cm-s-okaidia span.cm-comment {
+  color: #586d74 !important; /* gray */
+}
+
+.cm-s-okaidia.CodeMirror {
+  background-color: #1e2b30 !important;
+}
+
+.cm-s-okaidia span.cm-property {
+  color: #859901 !important; /* green */
+}
+
+.cm-s-okaidia .CodeMirror-linenumber {
+  color: #6c6ec6 !important; /* purple */
+}
+
+.cm-s-okaidia span.cm-atom, .cm-s-okaidia span.cm-number {
+  color: #268ad2 !important; /* blue */
+}
+
+.cm-s-okaidia span.cm-string {
+  color: #2aa197 !important; /* cyan */
+}
+
+.cm-s-okaidia span.cm-variable, .cm-s-okaidia span.cm-variable-2 {
+  color: #b58900 !important; /* yellow */
+}
+

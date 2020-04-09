@@ -76,6 +76,136 @@ terminal_colors() {
   echo "";
 }
 
+iterm_colors() {
+  clear_str="\e[0m"
+              black="Black    "
+                red="Red      "
+              green="Green    "
+             yellow="Yellow   "
+               blue="Blue     "
+            magenta="Magenta  "
+               cyan="Cyan     "
+              white="White    "
+          light_black="B Black  "
+          light_red="B Red    "
+        light_green="B Green  "
+       light_yellow="B Yellow "
+         light_blue="B Blue   "
+      light_magenta="B Magenta"
+         light_cyan="B Cyan   "
+        light_white="B White  "
+
+            spacing="         "
+          black_hex=" #263338 "
+            red_hex=" #dc312e "
+          green_hex=" #859901 "
+         yellow_hex=" #b58900 "
+           blue_hex=" #268ad2 "
+        magenta_hex=" #d33582 "
+           cyan_hex=" #2aa197 "
+          white_hex=" #eee8d5 "
+    light_black_hex=" #1e2b30 "
+      light_red_hex=" #cb4a16 "
+    light_green_hex=" #586d74 "
+   light_yellow_hex=" #657b82 "
+     light_blue_hex=" #839495 "
+  light_magenta_hex=" #6c6ec6 "
+     light_cyan_hex=" #93a0a1 "
+    light_white_hex=" #fdf6e3 "
+
+  declare -A color_hex
+  color_hex[0]=$black_hex
+  color_hex[1]=$red_hex
+  color_hex[2]=$green_hex
+  color_hex[3]=$yellow_hex
+  color_hex[4]=$blue_hex
+  color_hex[5]=$magenta_hex
+  color_hex[6]=$cyan_hex
+  color_hex[7]=$white_hex
+  color_hex[8]=$light_black_hex
+  color_hex[9]=$light_red_hex
+  color_hex[10]=$light_green_hex
+  color_hex[11]=$light_yellow_hex
+  color_hex[12]=$light_blue_hex
+  color_hex[13]=$light_magenta_hex
+  color_hex[14]=$light_cyan_hex
+  color_hex[15]=$light_white_hex
+
+  declare -A color_bg
+  color_bg[0]="\e[0m"
+  color_bg[1]="\e[31m"
+  color_bg[2]="\e[32m"
+  color_bg[3]="\e[33m"
+  color_bg[4]="\e[34m"
+  color_bg[5]="\e[35m"
+  color_bg[6]="\e[36m"
+  color_bg[7]="\e[37m"
+  color_bg[8]="\e[0m"
+  color_bg[9]="\e[91m"
+  color_bg[10]="\e[92m"
+  color_bg[11]="\e[93m"
+  color_bg[12]="\e[94m"
+  color_bg[13]="\e[95m"
+  color_bg[14]="\e[96m"
+  color_bg[15]="\e[97m"
+
+  declare -A colors
+  colors[0]=$black
+  colors[1]=$red
+  colors[2]=$green
+  colors[3]=$yellow
+  colors[4]=$blue
+  colors[5]=$magenta
+  colors[6]=$cyan
+  colors[7]=$white
+  colors[8]=$light_black
+  colors[9]=$light_red
+  colors[10]=$light_green
+  colors[11]=$light_yellow
+  colors[12]=$light_blue
+  colors[13]=$light_magenta
+  colors[14]=$light_cyan
+  colors[15]=$light_white
+
+  text_color="\e[0;30;40m"
+  text_color_invert="\e[0;37;40m"
+  declare -A text_colors
+  text_colors[0]=$text_color_invert
+  text_colors[1]=$text_color
+  text_colors[2]=$text_color
+  text_colors[3]=$text_color
+  text_colors[4]=$text_color
+  text_colors[5]=$text_color
+  text_colors[6]=$text_color
+  text_colors[7]=$text_color
+  text_colors[8]=$text_color_invert
+  text_colors[9]=$text_color
+  text_colors[10]=$text_color
+  text_colors[11]=$text_color
+  text_colors[12]=$text_color
+  text_colors[13]=$text_color
+  text_colors[14]=$text_color
+  text_colors[15]=$text_color
+
+  for i in {0..94}; do echo -en $clear_str"\e[4m "$clear_str ; done ; echo;
+  echo ''
+  for i in {0..7}; do echo -en "\e[48;5;${i}m"  $spacing  $clear_str" " ; done ; echo;
+  for i in {0..7}; do echo -en $text_colors[$i]"\e[48;5;${i}m"  $color_hex[$i]  $clear_str" " ; done ; echo;
+  for i in {0..7}; do echo -en "\e[48;5;${i}m"  $spacing  $clear_str" " ; done ; echo;
+  for i in {0..7}; do echo -en "\e[48;5;${i}m"$clear_str  $color_bg[$i]$colors[$i] " "  ; done ; echo;
+
+  for i in {0..94}; do echo -en $clear_str"\e[4m "$clear_str ; done ; echo;
+  echo ''
+
+  for i in {8..15}; do echo -en "\e[48;5;${i}m"  $spacing  $clear_str" " ; done ; echo;
+  for i in {8..15}; do echo -en $text_colors[$i]"\e[48;5;${i}m"  $color_hex[$i]  $clear_str" " ; done ; echo;
+  for i in {8..15}; do echo -en "\e[48;5;${i}m"  $spacing  $clear_str" " ; done ; echo;
+  for i in {8..15}; do echo -en "\e[48;5;${i}m"$clear_str  $color_bg[$i]$colors[$i]  " " ; done ; echo;
+
+  for i in {0..94}; do echo -en $clear_str"\e[4m "$clear_str ; done ; echo;
+  echo ''
+}
+
 colors() { awk 'BEGIN{
   s="/\\/\\/\\/\\/\\"; s=s s s s s s s s s s s s s s s s s s s s s s s;
   for (colnum = 0; colnum<256; colnum++) {
