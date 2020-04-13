@@ -49,6 +49,8 @@ if [[ -x `which nc` ]]; then
   alias nyan='nc -v nyancat.dakko.us 23' # nyan cat
 fi
 
+colors() { ruby ~/dotfiles/iterm_colors.rb }
+
 gcm() { temp=`ruby jira.rb HT-$@`; git commit -em $temp; }
 gcb() { git checkout -b "$@"; }
 gdv() { git diff -w "$@" | view - }
@@ -206,7 +208,7 @@ iterm_colors() {
   echo ''
 }
 
-colors() { awk 'BEGIN{
+colors2() { awk 'BEGIN{
   s="/\\/\\/\\/\\/\\"; s=s s s s s s s s s s s s s s s s s s s s s s s;
   for (colnum = 0; colnum<256; colnum++) {
     r = 255-(colnum * 255 / 255);
