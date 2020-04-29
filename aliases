@@ -30,6 +30,13 @@ alias standup='v ~/Google\ Drive/work_standup/`+%Y`'
 getip() { dig +short "$@" @resolver1.opendns.com }
 alias getmyip='getip myip.opendns.com'
 
+update_ruby() {
+  cd ~/.rbenv/plugins/ruby-build/
+  git pull origin master
+  cd -
+  rbenv install $@
+}
+
 # git
 unwip() {
   glog=`git log -1 --pretty=%B`;
