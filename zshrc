@@ -1,5 +1,8 @@
 source_file() { [[ -f $1 ]] && source $1 }
 
+autoload bashcompinit
+bashcompinit
+
 ##### ZSH INSTALLATION #########################################################
 autoload -Uz compinit && compinit
 export ZSH=$HOME/.zsh
