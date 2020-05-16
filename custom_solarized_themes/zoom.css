@@ -1,0 +1,37 @@
+#content_container, .content-body {
+    background-color: #263338;
+    color: #93A0A1;
+}
+
+.form-control-static.fullName, .promote-plugin .tool-title, .tool-items > div > .tool-info > div:first-child {
+    color: #EEE8D5;
+}
+
+.mark-button, .content-body a, .side-nav.nav-active .nav-header, .navbar-default .navbar-right>li>a {
+    color: #268AD2;
+}
+
+.mini-layout-body>.row>.nav-menu .zm-sidenav>li>a {
+    color: white;
+}
+
+.total-main-content {
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.z-form-row, .mtg-list-header, .mtg-list-content>div, .promote-plugin, .nav-tabs {
+    border-color: #1E2B30;
+}
+
+.zm-sidenav-alert, .zm-button {
+    background-color: #39394d;
+    border-color: #1E2B30;
+    color: #93A0A1;
+}
+
+body, html, #header_container, .join-frame #footer_container, .mini-layout-body>.row>.nav-menu, .launch-section, #footer-new, #stopgap-warpper {
+    background-color: #1E2B30;
+    color: #93A0A1;
+}
+

@@ -1,0 +1,113 @@
+body {
+  background: #1E2B30;
+  color: #93A0A1;
+}
+
+.msg-overlay-conversation-bubble, .msg-messaging-container__core-rail, .msg-form__compose-error,
+.msg-form__footer, .msg-title-bar__title-bar-title, .msg-overlay-list-bubble {
+  background: #1E2B30;
+}
+
+.right-rail .ad-banner-container, .msg-form__compose-error,
+.msg-s-message-list__top-banner, .msg-search-form__search-field[type=search],
+.msg-overlay-list-bubble-search__search-typeahead-input.msg-overlay-list-bubble-search__search-typeahead-input {
+  background: #263338;
+}
+
+.msg-s-event-listitem__message-bubble--is-focused.msg-s-event-listitem__message-bubble--msg-fwd-enabled .msg-s-event-listitem__body,
+.msg-s-event-listitem__message-bubble--is-focused.msg-s-event-listitem__message-bubble--msg-fwd-enabled .msg-s-event-listitem__subject,
+.msg-s-event-listitem__message-bubble.msg-s-event-listitem__message-bubble--msg-fwd-enabled:hover .msg-s-event-listitem__body,
+.msg-s-event-listitem__message-bubble.msg-s-event-listitem__message-bubble--msg-fwd-enabled:hover .msg-s-event-listitem__subject {
+  background-color: #18252A;
+}
+
+.msg-conversations-container__convo-item-link.active,
+.da-card-creative.da-card-creative--no-border,
+.type.exp.var-da--f300x250 .da-card-creative--no-border {
+  background: #263338;
+}
+
+.msg-conversations-container__convo-item-link:hover, .msg-overlay-list-bubble__convo-item-link:hover {
+  background: #25313E;
+}
+
+.msg-overlay-conversation-bubble, .msg-messaging-container__core-rail,
+.msg-conversation-card__content, .msg-conversation-card__content--selectable,
+.msg-thread, .global-footer-compact, .right-rail .ad-banner-container,
+.msg-form__compose-error, .msg-form__footer, .msg-title-bar__title-bar-title,
+.msg-search-form__title-bar-title, .msg-conversations-container__title-row,
+.msg-conversation-listitem__link .msg-overlay-list-bubble__convo-card-content,
+.msg-overlay-list-bubble-search__search-typeahead-input.msg-overlay-list-bubble-search__search-typeahead-input {
+  border-color: #263338;
+}
+
+.msg-form {
+  background: #263338;
+  border-top: 1px solid #364348;
+}
+
+.msg-overlay-conversation-bubble .msg-s-event-listitem__body, .msg-form p, .msg-messaging-container__core-rail p {
+  color: #93A0A1;
+}
+
+.msg-s-event-listitem__subject, .t-black, .EntityLockup-circle-2 dt,
+.EntityLockup-circle-2 dt h1, .EntityLockup-circle-2 dt h2, .EntityLockup-circle-2 dt h3,
+.EntityLockup-circle-2 dt h4, .EntityLockup-circle-2 dt h5, .EntityLockup-circle-2 dt h6,
+.EntityLockup-circle-2-ghost-person dt, .EntityLockup-circle-2-ghost-person dt h1,
+.EntityLockup-circle-2-ghost-person dt h2, .EntityLockup-circle-2-ghost-person dt h3,
+.EntityLockup-circle-2-ghost-person dt h4, .EntityLockup-circle-2-ghost-person dt h5,
+.EntityLockup-circle-2-ghost-person dt h6, .EntityLockup-circle-3-ghost-person dt,
+.EntityLockup-circle-3-ghost-person dt h1, .EntityLockup-circle-3-ghost-person dt h2,
+.EntityLockup-circle-3-ghost-person dt h3, .EntityLockup-circle-3-ghost-person dt h4,
+.EntityLockup-circle-3-ghost-person dt h5, .EntityLockup-circle-3-ghost-person dt h6,
+.EntityLockup-circle-4-ghost-company dt, .EntityLockup-circle-4-ghost-company dt h1,
+.EntityLockup-circle-4-ghost-company dt h2, .EntityLockup-circle-4-ghost-company dt h3,
+.EntityLockup-circle-4-ghost-company dt h4, .EntityLockup-circle-4-ghost-company dt h5,
+.EntityLockup-circle-4-ghost-company dt h6, .EntityLockup-circle-4-ghost-person dt,
+.EntityLockup-circle-4-ghost-person dt h1, .EntityLockup-circle-4-ghost-person dt h2,
+.EntityLockup-circle-4-ghost-person dt h3, .EntityLockup-circle-4-ghost-person dt h4,
+.EntityLockup-circle-4-ghost-person dt h5, .EntityLockup-circle-4-ghost-person dt h6,
+.EntityLockup-square-2-company dt, .EntityLockup-square-2-company dt h1,
+.EntityLockup-square-2-company dt h2, .EntityLockup-square-2-company dt h3,
+.EntityLockup-square-2-company dt h4, .EntityLockup-square-2-company dt h5,
+.EntityLockup-square-2-company dt h6, .EntityLockup-square-2-ghost-company dt,
+.EntityLockup-square-2-ghost-company dt h1, .EntityLockup-square-2-ghost-company dt h2,
+.EntityLockup-square-2-ghost-company dt h3, .EntityLockup-square-2-ghost-company dt h4,
+.EntityLockup-square-2-ghost-company dt h5, .EntityLockup-square-2-ghost-company dt h6,
+.EntityLockup-square-2-ghost-school dt, .EntityLockup-square-2-ghost-school dt h1,
+.EntityLockup-square-2-ghost-school dt h2, .EntityLockup-square-2-ghost-school dt h3,
+.EntityLockup-square-2-ghost-school dt h4, .EntityLockup-square-2-ghost-school dt h5,
+.EntityLockup-square-2-ghost-school dt h6, .EntityLockup-square-4 dt,
+.EntityLockup-square-4 dt h1, .EntityLockup-square-4 dt h2, .EntityLockup-square-4 dt h3,
+.EntityLockup-square-4 dt h4, .EntityLockup-square-4 dt h5, .EntityLockup-square-4 dt h6,
+.EntityLockup-square-4-ghost-company dt, .EntityLockup-square-4-ghost-company dt h1,
+.EntityLockup-square-4-ghost-company dt h2, .EntityLockup-square-4-ghost-company dt h3,
+.EntityLockup-square-4-ghost-company dt h4, .EntityLockup-square-4-ghost-company dt h5,
+.EntityLockup-square-4-ghost-company dt h6, .EntityLockup-square-4-ghost-school dt,
+.EntityLockup-square-4-ghost-school dt h1, .EntityLockup-square-4-ghost-school dt h2,
+.EntityLockup-square-4-ghost-school dt h3, .EntityLockup-square-4-ghost-school dt h4,
+.EntityLockup-square-4-ghost-school dt h5, .EntityLockup-square-4-ghost-school dt h6,
+.EntityLockup-square-5 dt, .EntityLockup-square-5 dt h1, .EntityLockup-square-5 dt h2,
+.EntityLockup-square-5 dt h3, .EntityLockup-square-5 dt h4, .EntityLockup-square-5 dt h5,
+.EntityLockup-square-5 dt h6, .EntityLockup-square-5-ghost-company dt,
+.EntityLockup-square-5-ghost-company dt h1, .EntityLockup-square-5-ghost-company dt h2,
+.EntityLockup-square-5-ghost-company dt h3, .EntityLockup-square-5-ghost-company dt h4,
+.EntityLockup-square-5-ghost-company dt h5, .EntityLockup-square-5-ghost-company dt h6,
+.EntityLockup-square-5-ghost-school dt, .EntityLockup-square-5-ghost-school dt h1,
+.EntityLockup-square-5-ghost-school dt h2, .EntityLockup-square-5-ghost-school dt h3,
+.EntityLockup-square-5-ghost-school dt h4, .EntityLockup-square-5-ghost-school dt h5,
+.EntityLockup-square-5-ghost-school dt h6 {
+  color: #EEE8D5;
+}
+
+.t-black--light {
+  color: #93A0A1;
+}
+
+.artdeco-button--muted.artdeco-button--tertiary,
+.artdeco-button--muted.artdeco-button--tertiary:visited,
+.artdeco-button--muted.artdeco-button--tertiary:visited:hover,
+.msg-binary-reply-options__prompts {
+  color: #657B82;
+}
+

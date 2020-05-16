@@ -1,0 +1,33 @@
+input, textarea, #doc-chrome #docs-titlebar-buttons, #doc-chrome #docs-toolbar-wrapper, #doc-chrome #docs-menubars, #doc-chrome #docs-bars, #docs-chrome, .docs-companion-app-switcher-container, .docs-material #docs-header .docs-titlebar-buttons, .docs-gm #docs-toolbar-wrapper, .docs-material #docs-toolbar-wrapper, .companion-app-switcher-container, body, #formula-bar, #formula-bar-dragger, .cell-input, #waffle-loading-screen, .docs-gm .grid-bottom-bar, .waffle-revisions-container, div.column-headers-background, th.column-headers-background, div.row-headers-background, th.row-headers-background, .grid-shim-bottom, .grid-shim-end-ltr {
+  background: #1E2B30;
+  border-color: #364348;
+  color: #586D74;
+}
+
+.docs-title-input:focus, .docs-parent-collections-container-prefix, .docs-parent-collections-container-text {
+  color: #eee8d5;
+}
+
+.docs-gm .docs-menubar .goog-control, .docs-material .goog-toolbar-combo-button-input {
+  color: #586D74;
+}
+
+.grid-shim-end-ltr, .grid-shim-end-rtl, .waffle-background-container, .grid-container, .docs-gm #docs-editor, .docs-gm #docs-editor-container {
+  background: #263338;
+}
+
+.docs-material .goog-toolbar-button, .docs-material .goog-toolbar-combo-button, .docs-material .goog-toolbar-menu-button {
+  background: #263338;
+  border-color: #364348;
+  color: #eee8d5;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.freezebar-hover .freezebar-vertical-handle, .freezebar-hover .freezebar-horizontal-handle {
+  background: #575C9D;
+}
+
+.freezebar-vertical-handle, .freezebar-horizontal-handle, .row-freezebar-extension, .column-freezebar-extension {
+  background: #333D59;
+}
+
