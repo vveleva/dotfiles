@@ -1,15 +1,14 @@
-##### GENERAL ##############################################################
+##### GENERAL
 bind -T copy-mode-vi v begin-selection
 
-# Sane scrolling
-set -g mouse on
+set -g mouse on # Sane scrolling
 
 # remap leader ctrl-b to ctrl-space
 unbind C-b
 set -g prefix C-Space
 bind C-s send-prefix # Pass on ctrl+space for other apps
 
-bind \ split-window -h # Split panes horizontal
+bind \\ split-window -h # Split panes horizontal
 bind - split-window -v # Split panes vertically
 
 set -g escape-time 0
@@ -38,7 +37,7 @@ bind -n S-Right resize-pane -R 1
 bind -n S-Down resize-pane -D 1
 bind -n S-Up resize-pane -U 1
 
-##### COPY & PASTE #########################################################
+##### COPY & PASTE
 # provide access to the clipboard for pbpaste, pbcopy
 set -g default-command "reattach-to-user-namespace -l ${SHELL}"
 setw -g automatic-rename on

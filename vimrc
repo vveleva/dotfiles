@@ -186,9 +186,15 @@ nnoremap <C-p> :call PickFile()<CR>
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args> | redraw! | cwindow
 
 " let g:ale_lint_on_text_changed = 'never'
-let g:ale_fixers = { 'javascript': ['eslint'], 'javascript.jsx': ['eslint'], 'ruby': ['rubocop'] }
-" let g:ale_fix_on_save = 1
-" let g:ale_javascript_prettier_use_local_config = 1
+let g:ale_fixers = {
+  \ 'javascript': ['eslint', 'prettier'],
+  \ 'javascript.jsx': ['eslint', 'prettier'],
+  \ 'css': ['prettier'],
+  \ 'ruby': ['rubocop']
+  \  }
+let g:ale_linters_explicit = 1
+" let g:ale_fix_on_save = 1 " Fixes linter errors on save
+let g:ale_javascript_prettier_use_local_config = 1
 
 " ##### PLUGINS ################################################################
 if filereadable(expand("~/.vimrc.bundles"))
