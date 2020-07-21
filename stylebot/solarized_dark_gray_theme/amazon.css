@@ -1,0 +1,160 @@
+#a-page, .a-box-group>.a-box, .s-desktop-content, .a-button, #nav-search .nav-search-field, #dp, .a-accordion .a-accordion-row, .a-accordion .a-accordion-active .a-accordion-inner, .a-box .a-divider.a-divider-section .a-divider-inner:after, .a-color-base-background .a-divider.a-divider-section .a-divider-inner:after, .a-divider.a-divider-section .a-divider-inner:after, #cbcc_banner, #promise-background-container.background-normal, .dp-customer-reviews-wrapper {
+  background: #1E2B30;
+}
+
+#a-page, .a-last, .a-normal, .a-selected, .a-disabled, .askInlineWidget .vote input[type=submit], .aplus-v2 .a-color-alternate-background, body {
+  background-color: #1E2B30;
+  color: #93A0A1;
+}
+
+#dp a, #dp a:active, #dp a:link, a:visited, a, a:active, a:link {
+  color: #268AD2;
+}
+
+#dp, #search {
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+#driverPhoto-bottomSheet-container .widgetLink-group a:hover, #errorPageContainer .widgetLink-group a:hover, #mapTracking-bottomSheet-container .widgetLink-group a:hover, #pageContainer .widgetLink-group a:hover {
+  background-color: #263338;
+  color: #6C6EC6;
+}
+
+#nav-subnav .nav-a, .a-button .a-button-text, [data-creative-type=MultiBrandCreativeDesktop] .sb_VVblLH_V {
+  color: #EEE8D5;
+}
+
+#nav-subnav.spacious, table.a-keyvalue th, #nav-subnav {
+  background-color: #162328;
+}
+
+#rhf .rhf-border, .a-box-inner, .a-box, #a-page, .a-box-group>.a-box, .s-desktop-content, .custom-view-options, #rhf .rhf-divider-no-gradient, hr, #revDivider .a-divider-inner, hr.bucketDivider, .vse-video-content, .askInlineWidget .vote, #spc-container, .maple-banner--border, #navbar.nav-bluebeacon #nav-search .nav-search-field, .bit-aa-install-widget, .sc-list .sc-list-item-border, .sc-list .sc-list-head, #cbcc_banner, .aplus-v2 .apm-rightthirdcol, .aplus-v2 .a-box, #prodDetails .secHeader, table.a-keyvalue, table.a-keyvalue td, table.a-keyvalue th, #navbar[data-template=layoutSwapToolBar].layout2.bold-focus-hover #nav-pldn-msg-wrapper .nav-pldn-a:hover, #navbar[data-template=layoutSwapToolBar].layout2.bold-focus-hover #nav-shop #nav-link-fresh:hover, #navbar[data-template=layoutSwapToolBar].layout2.bold-focus-hover #nav-shop #nav-link-shopall:hover, #navbar[data-template=layoutSwapToolBar].layout2.bold-focus-hover .nav-right #nav-tools .nav-a:hover, #navbar[data-template=layoutSwapToolBar].layout2.bold-focus-hover a#nav-hamburger-menu:hover, .blue-box-pricing-table .first-cell {
+  border-color: #2E3B40;
+}
+
+.a-alert-success .a-alert-container {
+  box-shadow: 0 0 0 4px #859901 inset;
+}
+
+#a-page, .a-box-group>.a-box, .s-desktop-content, .a-input-text, input[type=search], input[type=text], input[type=number], input[type=tel], input[type=password], select.a-select-multiple, textarea {
+  background-color: #1E2B30;
+  border-color: #2E3B40;
+  color: #93A0A1;
+}
+
+.a-button {
+  border-color: #0E1B20;
+  box-shadow: 0 0 5px rgba(0,0,0,0.15);
+}
+
+.a-button .a-button-inner {
+  background: #586D74;
+  background-image: none;
+  border: none;
+  box-shadow: 0 0 5px rgba(0,0,0,0.15);
+}
+
+.a-button-normal .a-button-inner {
+  background-color: #268AD2;
+  border: none;
+  box-shadow: 0 0 5px rgba(0,0,0,0.15);
+}
+
+.a-button-primary .a-button-inner {
+  background-color: #CB4A16;
+  box-shadow: 0 0 5px rgba(0,0,0,0.15);
+}
+
+.a-carousel-card {
+  margin-left: 13px;
+  padding: 5px;
+}
+
+.a-carousel-card img {
+  opacity: 0.5;
+}
+
+.a-carousel-card img:hover {
+  opacity: 1;
+}
+
+.a-color-base, .a-price[data-a-color=base], #sponsored-products-dp_feature_div h2, .pa_componentTitleTest h2, #productDescription, #prodDetails #SalesRank ul li span.zg_hrsr_ladder, #prodDetails #SalesRank ul li span.zg_hrsr_rank, #prodDetails .wrapper, #prodDetails td, .a-alert-info>.a-box-inner:only-child h4, .blue-box-pricing-table .first-row td, .blue-box-pricing-table .middle-cell, .a-list-item {
+  color: #93A0A1;
+}
+
+.a-color-price {
+  color: #DC312E;
+}
+
+.a-color-secondary, #quickPromoBucketContent ul, #quickPromoBucketContent .content ul li, .a-color-tertiary {
+  color: #586D74;
+}
+
+.a-color-success, .a-color-attainable, #progressTracker-container .reached .milestone-primaryMessage, .widgetHeader, #promise-container #secondaryStatus.black, .financial-offer-list-item.cashback-financial-offer {
+  color: #859901;
+}
+
+.a-icon-text-separator, .a-text-separator, [data-creative-type=TetrisCreativeDesktop] .sb_37u_8SFq, .prime-updp-divider {
+  background-color: #2E3B40;
+}
+
+.a-size-base {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.a-size-base-plus {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.nav-flyout, .nav-flyout .nav-arrow, #navbar .nav-flyout-sidePanel, #nav-flyout-wl-alexa, #nav-flyout-wl-items, #nav-flyout-accountList #nav-al-your-account {
+  background: #1E2B30;
+  border-color: #2E3B40;
+  color: #93A0A1;
+}
+
+.nav-tpl-discoveryPanelList .nav-text, .nav-tpl-discoveryPanelSummary .nav-text, .nav-tpl-itemList .nav-text, .hcb-see-more-link a {
+  color: #268AD2;
+}
+
+.pmts-selected, .a-box-inner, #spc-container, .a-normal, .a-box-group>.a-box, a-list-item {
+  background: none;
+  background-color: inherit;
+}
+
+.s-image-square-aspect img, #sp_detail .a-carousel-card .a-section .a-link-normal img, .a-carousel-card .a-section .a-spacing-mini img, .comparison_image_title_cell img, .imgTagWrapper {
+  padding: 5px;
+}
+
+.s-image-square-aspect, [data-creative-type=MultiBrandCreativeDesktop] .sb_ZcnsR4zE, #sp_detail .a-carousel-card .a-section .a-link-normal img, .a-carousel-card .a-section .a-spacing-mini, .comparison_image_title_cell img, .imgTagWrapper, #navbar.nav-bluebeacon #nav-search .nav-search-scope, #cardsContainer .cardContainer, .cta-surroundshadow, #order-summary-box, .a-box {
+  background-color: #2E3B40;
+  border: 1px solid #3E4B50;
+  box-shadow: 0 0 3px 2px rgba(0,0,0,0.15);
+}
+
+.s-image-square-aspect:hover, [data-creative-type=MultiBrandCreativeDesktop] .sb_ZcnsR4zE:hover {
+  background-color: #2E3B40;
+  border: 1px solid #0E1B20;
+  border-radius: 0px;
+  box-shadow: 0 0 3px 2px rgba(0,0,0,.15);
+  outline: 4px solid #0E1B20;
+}
+
+.ya-card__heading--rich, #rhf #rhf-shoveler, .a-checkbox label, .a-radio label, .vse-related-videos-container .vse-video-title, .askInlineWidget .vote, .a-profile-name, ol.a-carousel, .main-content, .cancel-anytime {
+  color: #EEE8D5;
+}
+
+ul.a-pagination li.a-selected a, ul.a-pagination li a, .a-meter {
+  background: none;
+  background-color: #2E3B40;
+  box-shadow: 0 0 5px rgba(0,0,0,0.15);
+}
+
+ul.a-pagination li:not(.a-selected) a {
+  background: #2E3B40;
+  border-color: #3E4B50;
+  box-shadow: 0 0 5px rgba(0,0,0,0.15);
+  color: #93A0A1;
+}

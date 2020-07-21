@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "OKCupid",
+  "version": "1.2",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://okcupid.com/*"
+      ],
+      "css": ["highlight.css", "okc.css"],
+      "js": ["jquery-1.11.1.min.js", "jquery.highlight-4.js", "test.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "okc.css", "highlight.css", "test.js", "jquery-1.11.1.min.js", "jquery.highlight-4.js"]
+}

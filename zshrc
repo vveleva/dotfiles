@@ -1,32 +1,35 @@
-source_file() { [[ -f $1 ]] && source $1 }
-
 autoload bashcompinit
 bashcompinit
+
 
 ##### ZSH INSTALLATION #########################################################
 autoload -Uz compinit && compinit
 export ZSH=$HOME/.zsh
 
+
 ##### AUTOLOAD ZSH FUNCTIONS ###################################################
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
 
-#### ZSH THEME #################################################################
-setopt PROMPT_SUBST # Allow for functions in the prompt.
-source "$ZSH/themes/velina.zsh-theme"
+fpath=(/usr/local/share/zsh-completions $fpath)
 
-for plugin in $ZSH/plugins/*.plugin.zsh; do
-  source $plugin
-done
 
 ##### LOAD NVM #################################################################
+load_nvm_script() { [ -s $1 ] && \. $1 }
+
 export NVM_DIR="$HOME/.nvm"
-# source "$(brew --prefix nvm)/nvm.sh"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+load_nvm_script "$NVM_DIR/nvm.sh"
+load_nvm_script "$NVM_DIR/bash_completion"
+
+# keep temporarily to make sure the above works
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
 
 ##### SETUP RBENV PATH #########################################################
 PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
 
 ##### SETUP PATH ###############################################################
 PATH="/usr/local/heroku/bin:$PATH"
@@ -39,9 +42,11 @@ export -U PATH
 export MANPATH="/usr/local/man:$MANPATH"
 export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+
 ##### CHANGE DIRECTORIES #######################################################
 setopt AUTO_CD # type the name of a directory to cd to it
 setopt CHASE_LINKS # resolve symbolic links when changing directory
+
 
 ##### HISTORY ##################################################################
 setopt EXTENDED_HISTORY # save timestamps, use history -f to get date and time
@@ -55,13 +60,15 @@ HISTFILE=~/.history
 HISTSIZE=999999999999999999 # number of lines in the HISTFILE
 SAVEHIST=999999999999999999 # number of lines to save in HISTFILE
 
-# Use vim as a manpager (instead of less)
-# export MANPAGER="col -bx | vim -MRc 'set ft=man fdm=indent nonu nornu' -"
+
+##### VIM IN MANPAGER (instead of less) ########################################
 export MANPAGER="col -bx | vim -MRc 'set ft=man ts=2 nolist nomod' -"
 
 export VISUAL="vim"
 export EDITOR=$VISUAL
 
+
+##### VIM IN ZSH ###############################################################
 bindkey -v
 bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line
@@ -70,13 +77,25 @@ bindkey -M viins '^S' history-incremental-search-forward # TODO: change to ctrl-
 
 bindkey -v '^?' backward-delete-char
 
+
 ##### LOAD AUTOJUMP ############################################################
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
+
+#### ZSH THEME #################################################################
+setopt PROMPT_SUBST # Allow for functions in the prompt.
+source "$ZSH/themes/velina.zsh-theme"
+
+
+##### SOURCE PLUGINS ###########################################################
+for plugin in $ZSH/plugins/*.plugin.zsh; do
+  source $plugin
+done
+
+
 ##### SOURCE OTHER FILES #######################################################
+source_file() { [[ -f $1 ]] && source $1 }
+
 source_file ~/.aliases
 source_file ~/.aliases.local
 source_file ~/.zshrc.local
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-fpath=(/usr/local/share/zsh-completions $fpath)

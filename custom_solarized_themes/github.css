@@ -170,11 +170,15 @@ body, .application-main, .diffbar, .pr-toolbar.is-stuck, .gh-header, .Header {
   color: #dc312e;
 }
 
-.diffstat-block-added {
+.diffstat-block-added, .State--open {
   background-color: #859901;
+
+}
+.diffstat-block-added, .diffstat-block-neutral, .diffstat-block-deleted {
+  outline-color: #50565c;
 }
 
-.text-green {
+.text-green, .color-text-success {
   color: #859901;
 }
 
@@ -198,13 +202,13 @@ img[alt="@vveleva"] {
 
 .State--purple {
   background-color: #6f42c1;
-  color: #9f72f1;
+  color: #efe2ff;
   border-color: #7f52d1;
 }
 
 .State--green {
   background-color: #859901;
-  color: #b5c931;
+  color: #c5f991;
   border-color: #95a911;
 }
 
@@ -237,6 +241,9 @@ kbd {
 .blob-num-expandable .directional-expander, .mr-1 {
   color: #0e1b20;
 }
+.SelectMenu-list .mr-1 {
+  background-color: #08f;
+}
 
 input[type="checkbox"]:not(:checked) {
   opacity: 0.5;
@@ -263,6 +270,9 @@ input[type="checkbox"]:not(:checked) {
 .diff-table tbody tr:hover > td.blob-code-hunk {
   background-color: #1e2b30;
   color: white;
+}
+.flash-warn {
+  color: #1e2b30;
 }
 
 /* git commits page START */
@@ -300,12 +310,15 @@ input[type="checkbox"]:not(:checked) {
   background-color: #192327;
   border-color: #192327;
 }
+.branch-action .branch-action-item {
+  border: none;
+}
 
 .timeline-comment-wrapper, .discussion-timeline-actions {
   border-color: #0e1b20;
 }
 
-.timeline-comment, .timeline-comment.current-user, .branch-action-item, .mergeability-details, .merge-status-list, .discussion-sidebar-item+.discussion-sidebar-item {
+.timeline-comment, .timeline-comment.current-user, .mergeability-details, .merge-status-list, .discussion-sidebar-item+.discussion-sidebar-item {
   border-color: #192327;
 }
 
@@ -519,9 +532,13 @@ h4.merge-branch-heading {
 }
 
 /* green */
-
-.branch-action-state-clean .branch-action-icon, .completeness-indicator-success {
+.bg-green {
   background-color: #859901;
+}
+
+.branch-action-state-clean .branch-action-icon, .completeness-indicator-success, .TimelineItem-badge.bg-green {
+  background-color: #859901;
+  border-color: #95a911
 }
 
 .branch-action-state-clean .branch-action-body:before, .branch-action-state-clean .branch-action-body:after {
@@ -529,7 +546,7 @@ h4.merge-branch-heading {
 }
 
 .branch-action-state-clean .branch-action-body {
-  border: 1px solid #dbab09;
+  border: 1px solid #859901;
 }
 
 /* yellow */
@@ -559,6 +576,6 @@ h4.merge-branch-heading {
   background-color: inherit;
 }
 
-div.d-flex.flex-items-center.flex-wrap.mt-0.gh-header-meta {
+div.clearfix.new-discussion-timeline.container-xl.px-3.px-md-4.px-lg-5 {
 
 }

@@ -1,0 +1,15 @@
+
+#nav-search .nav-search-field .nav-input {
+  color: #EEE8D5;
+}
+#nav-search .nav-search-field, #nav-search .nav-active {
+  background-color: #263338;
+}
+
+#navbar.layout2.bold-focus-hover #nav-search .nav-searchbar .nav-focus, #navbar.layout2.bold-focus-hover #nav-search .nav-searchbar.nav-active {
+  box-shadow: 0 0 0 0px #febd69;
+}
+
+body {
+  background-color: #eaeaea
+}

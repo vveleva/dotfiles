@@ -1,0 +1,61 @@
+span[data-original-title="vveleva"] {
+height: 50px;
+width: 50px;
+background-color: #d33582 !important;
+border-radius: 50% !important;
+padding-top: 1px !important;
+box-shadow: #d33582 0 0 25px !important;
+}
+
+img[src="https://avatars.githubusercontent.com/u/508915?v=4"] {
+margin-top: 1px;
+}
+
+.pa2, .ph1 {
+padding: 2px;
+}
+button.pa2, button.ph1 {
+padding: 0;
+}
+.ph2, .pa1, .pv--3 {
+padding-top: 1px;
+padding-bottom: 1px;
+}
+
+.ph4 {
+padding: 2px 20px;
+}
+.mt5 { margin-top: 5px;}
+.mb2 { margin-bottom: 5px; }
+.mt--3, .mt1 {
+margin-top: 0;
+}
+.quick-jump {
+margin-top: 2px;
+}
+.glostick-active--helmet {
+padding-top: 65px;
+}
+.glostick-nav, .glostick__user .icon-navigator-toggle, .glostick__menu-icon--account {
+height: 38px;
+}
+.glostick::after {
+top: 65px;
+}
+.glostick__menu-icon--account {
+padding-top: 3px;
+}
+.glostick__user__notification, .glostick__property .icon-logo {
+top: 2px;
+}
+.glostick__property__name svg {
+top: -5px;
+}
+.nav.nav-tabs.sub-nav a {
+padding: 2px 10px;
+height: 25px;
+}
+.top-nav {
+padding: 0;
+min-height: 30px;
+}

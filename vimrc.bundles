@@ -24,6 +24,16 @@ Plug 'mtscout6/vim-cjsx'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'suan/vim-instant-markdown'
+Plug 'slim-template/vim-slim'
+
+" Snipmate engine for Textmate-style snippets
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'vveleva/vim-snippets' " forked from honz/vim-snippets
+
+" A Vim Plugin for Lively Previewing LaTeX PDF Output
+Plug 'lervag/vimtex'
 
 " css color highlighting
 Plug 'skammer/vim-css-color'

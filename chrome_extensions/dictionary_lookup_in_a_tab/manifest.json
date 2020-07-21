@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Dictionary Lookup In A Tab",
+  "version": "1.1",
+  "description": "Looks up highlighted text in a dictionary in a new tab with specific shortcuts",
+  "permissions": ["tabs", "<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["dictionary_lookup.js"]
+    }
+  ],
+  "web_accessible_resources": ["dictionary_lookup.js"],
+  "background":
+  {
+    "scripts": ["dictionary_lookup.js"],
+    "persistent": true
+  }
+}
+
+
+

@@ -1,0 +1,14 @@
+.cardsummary-match-pct:contains("97%") {
+  background-color: #ff4dc4;
+  font-size: 60px;
+}
+
+.cardsummary-match-pct:contains("98%") {
+  background-color: #ff4dc4;
+  font-size: 60px;
+}
+
+.cardsummary-match-pct:contains("99%") {
+  background-color: #ff4dc4;
+  font-size: 60px;
+}

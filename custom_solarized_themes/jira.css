@@ -1,192 +1,88 @@
-.aXw.T-KT:before {
-    content: -webkit-image-set(url(//ssl.gstatic.com/ui/v1/star/star4.png) 1x,url(//ssl.gstatic.com/ui/v1/star/star4_2x.png) 2x);
+body, #jira-frontend {
+background-color: #1E2B30;
+}
+.aui-page-header, .aui-page-panel, .aui-page-panel-nav {
+background-color: #1E2B30;
+}
+.css-1s1v97q, .gkbBhY {
+background-color: #1E2B30;
+}
+.css-1764c62::after {
+background: none;
+}
+.css-1nabfbr, .css-1nabfbr:hover, .css-1nabfbr:active, .css-1nabfbr:focus, .css-1nabfbr:visited, .css-1nabfbr:disabled, .css-1nabfbr[disabled] {
+color:#268AD2
 }
 
-.amn, .yO {
-    color: #a2b8ba;
+#ghx-pool, #ghx-column-header-group.ghx-fixed {
+background-color: #1E2B30;
 }
 
-.ams:hover, .aoP a, .e, .ii a[href], .x2 {
-    color: #3d92f8;
+.ghx-column-headers .ghx-column, .ghx-columns .ghx-column, .adg3 .ghx-column-headers .ghx-column, .adg3 .ghx-columns .ghx-column {
+background-color: #263338;
+}
+.ghx-issue {
+background-color: #364348;
+}
+.adg3 .ghx-summary, .adg3 .ghx-summary .ghx-inner, .bqOJnq, h1, h2, h3, h4, body, .cbelDw {
+color: #93A0A1;
+}
+[data-test-id="profilecard-next.ui.profilecard.profilecard-trigger"], .gdQqCI {
+color: #EEE8D5;
+}
+a { color: #268AD2 }
+[role="presentation"] a { color: #162328;}
+
+[data-test-id="issue-view-layout-templates-views.ui.context.visible-hidden.ui.primary-items"] > div > div > div, [data-test-id="issue-view-layout-group.common.ui.collapsible-group-factory.secondary-context-items"], .imhCZB {
+border-color: #465358;
 }
 
-.bRwyIK {
-    background-color: #1e2b30;
-    color: #2aa197;
-    margin-left: -110px;
+.css-1u84ut1, .css-zyarao, .css-85q5jz, .css-l9c1ko {
+background-color: #263338;
+}
+.css-nh9cge {
+color: #268AD2;
+background-color: #1E2B30;
+}
+.css-nh9cge [data-item-title] {
+color: #268AD2;
 }
 
-.cArfLG {
-    background-color: #364348;
+.css-1u84ut1, .css-zyarao, .css-85q5jz [data-item-title] {
+color:  #839495;
+}
+.css-dycak9 {
+color: #839495;
+background-color: #1E2B30;
+}
+#jira.adg3 .aui-label, #jira.adg3 .aui-lozenge, #jira.adg3 .ghx-swatch {
+font-size: 11px;
+}
+.aui-badge, aui-badge {
+font-size: 10px;
+line-height: 11px;
+height: 12px;
+padding-left: 3px;
+padding-right: 3px;
+background-color: #465358;
+color: #fff;
 }
 
-.css-132ue2h {
-    background-color: #1e2b30;
-    border: 2px solid #2e3b40;
+#content #search-header-view .header-section-primary .aui-nav>li>h1, #content #search-header-view .header-section-primary .aui-page-header-inner>h1, #content #search-header-view .header-section-primary .legacy-jira-fe-module>.mod-header>h3, #content #search-header-view .header-section-primary .search-title, #content #search-header-view .header-section-primary .subnavigator-title, #content #search-header-view .header-section-primary>h1, #content .aui-page-header-main .aui-nav>li>h1, #content .aui-page-header-main .aui-page-header-inner>h1, #content .aui-page-header-main .legacy-jira-fe-module>.mod-header>h3, #content .aui-page-header-main .search-title, #content .aui-page-header-main .subnavigator-title, #content .aui-page-header-main>h1, #content .aui-page-panel .aui-nav>li>h1, #content .aui-page-panel .aui-page-header-inner>h1, #content .aui-page-panel .legacy-jira-fe-module>.mod-header>h3, #content .aui-page-panel .search-title, #content .aui-page-panel .subnavigator-title, #content .aui-page-panel>h1 {
+color: #93A0A1;
 }
 
-.css-132ue2h .cwXEzS {
-    border-radius: 15px;
-    height: 18px;
-    margin-left: -75px;
-    margin-top: 6px;
-    padding: 0px;
-    width: 100px;
+.css-pe33hu {
+background-color: #465358;
+box-shadow: #162328 0px 0px 0px 2px;
 }
-
-.css-132ue2h .cwXEzS span {
-    background-color: #1e2b30;
-    border-radius: 15px;
-    color: #788e95;
-    /* 859901 6c6ec6 */
-    height: 18px;
-    width: 100px;
+.ibWXUP {
+border-color: #268AD2;
 }
-
-.css-132ue2h .cwXEzS span[aria-label] {
-    background-image: none;
-    content: attr(aria-label);
+.hFCFBS {
+border-color: #162328;
+background-color: #465358;
 }
-
-.css-132ue2h .cwXEzS span[aria-label]:before {
-    content: attr(aria-label);
-    display: inline;
-    font-size: 12px;
-    left: 50%;
-    position: absolute;
-    top: 0;
-    transform: translate(-50%, 0);
-    white-space: pre;
-}
-
-.css-132ue2h .llCsQv {
-    color: white;
-}
-
-.css-132ue2h h1, .css-132ue2h h2 {
-    color: #98aeb5;
-}
-
-.css-132ue2h p {
-    color: #788e95;
-}
-
-.css-132ue2h, .gtljro, body {
-    background-color: #1e2b30;
-    color: #788e95;
-}
-
-.css-g9ubhh {
-    padding: 0;
-}
-
-.cwXEzS {
-    width: 100px;
-    margin-left: -75px;
-    border-radius: 15px;
-    height: 18px;
-    margin-top: 6px;
-    padding: 0px;
-}
-
-.cwXEzS span {
-    height: 18px;
-    width: 100px;
-    background-color: #1e2b30;
-    color: #788e95;
-    /* 859901 6c6ec6 */
-    border-radius: 15px;
-}
-
-.cwXEzS span[aria-label] {
-    content: attr(aria-label);
-    background-image: none;
-}
-
-.cwXEzS span[aria-label]:before {
-    content: attr(aria-label);
-    font-size: 12px;
-    position: absolute;
-    white-space: pre;
-    display: inline;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
-.dcQwpB {
-    color: white;
-}
-
-.eKbjUF, .kkSwBp {
-    background-color: #1e2b30;
-    opacity: .75;
-}
-
-.bOxZeg, .jrFrsg, .gTTunj {
-    background-color: #1e2b30;
-}
-
-.jItVrh {
-    padding: 2px 5px;
-}
-
-.jItVrh:hover {
-    background-color: #364348;
-    color: white;
-}
-
-.jmWpsg {
-    border-radius: 0;
-}
-
-.sc-kDhYZr.gWSIda, .__board-test-hook__column, .jmWpsg, .hlvuOs, .jpBcQb, .eKjqmC {
-    background-color: #1e2b30;
-}
-
-.jmWpsg, .eKjqmC {
-    border-radius: 0;
-}
-
-/* ticket labels/epics */
-
-div.sc-kxYOAa.fpGrNO div {
-    display: none;
-}
-
-.dMoWjj {
-    border-color: #364348;
-}
-
-.iAwmlu {
-    background-color: #364348;
-}
-
-.jWYYwa {
-    color: white;
-}
-
-.css-132ue2h div[class*='Content-']:hover {
-    background-color: #28353a;
-}
-
-
-div[id*='card-'] > div > div {
-    background-color: #28353a;
-    color: #586e75;
-}
-
-div[id*='card-'] > div > div:hover {
-    box-shadow: 0 0 0 2pt #465358;
-    background-color: #364348;
-}
-
-div[data-test-id*='software-board'],
-div[data-test-id*="software-board.board-area"] section > div:first-of-type {
-  background-color: #1e2b30;
-}
-
-div[data-test-id*='platform-board-kit'] {
-  background-color: #1e2b30;
-  border-radius: 0;
+.css-j9ugy0::before, .css-j9ugy0::after {
+  background-color: var(--ds-menu-scroll-indicator-color,#162328);
 }

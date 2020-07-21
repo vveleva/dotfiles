@@ -1,0 +1,115 @@
+let mapleader = " "
+
+nnoremap Q <nop>
+
+" insert timestamp
+:nnoremap <F5> "=strftime("%c")<CR>P
+:inoremap <F5> <C-R>=strftime("%c")<CR>
+
+" System clipboard copy/paste
+xnoremap <C-c> "*y
+nnoremap <Leader>p :set paste expandtab<CR>"*]p:set nopaste<CR>
+
+" Better shortcut for navigating between split windows
+nnoremap <Leader>w <C-w>w
+nnoremap <Leader>i mmgg=G`m
+nnoremap <Leader>bb :!bundle install<cr>
+
+" Press Space to turn off highlighting and clear any message already displayed.
+nnoremap <Leader>h :nohlsearch<CR>
+
+" Grep for the current word
+nnoremap <Leader>k :Ag <C-R><C-W><CR>
+vnoremap <Leader>k y<CR>:Ag <C-R>"<CR>
+
+" Quickly open vim
+nnoremap <Leader>v :vsplit $MYVIMRC<CR>
+
+" Hotkey for NERDTree toggle
+nnoremap <Leader><C-n> :NERDTreeFind<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <D-F> :Ag<Space>
+
+" Keyword.vim by default acts as vim's <kbd>K</kbd> mapping by passing current keyword as argument
+let g:keyword_command = 'Ag --fixed-strings {keyword}'
+
+" Substitute for CTRL-P
+nnoremap <C-p> :call PickFile()<CR>
+
+" TODO: find out what this does lol
+command! -nargs=+ -complete=file -bar Ag silent! grep! <args> | redraw! | cwindow
+
+nnoremap <Leader>es :tabedit $HOME/.vim/bundle/vim-snippets<CR>
+
+" The legacy SnipMate parser is deprecated. Please see :h SnipMate-deprecate.
+" https://www.wiserfirst.com/blog/vim-tip-snipmate-legacy-parser-warning/
+let g:snipMate = { 'snippet_version' : 1 }
+
+
+let g:tex_flavor = 'latex'
+nnoremap <Leader>t :VimtexCompile<CR>
+
+
+" ##### AUTOLOAD COMMANDS ##########################################################################
+" it reloads .vimrc on :w of this file
+if !exists("*ReloadVimSettings")
+  function ReloadVimSettings()
+    source $MYVIMRC
+  endfunction
+endif
+
+" Autoload vimrc
+augroup update_vimrc
+  au!
+  au BufWritePost .vimrc call ReloadVimSettings()
+augroup END
+
+
+" Use syntax highlighting and color scheme when possible
+if (&t_Co > 2)
+  if !exists("syntax_on")
+    syntax on
+  endif
+endif
+
+" Strip trailing whitespace
+au BufWritePre *.rb :%s/\s\+$//e
+au BufWritePre *.py :%s/\s\+$//e
+au BufWritePre *.js :%s/\s\+$//e
+au BufWritePre *.css :%s/\s\+$//e
+
+if executable('ag')
+  set grepprg=ag
+
+  " Use Ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+  let g:ctrlp_use_caching = 0
+endif
+
+
+let g:slime_target = "tmux" " Setting up vim_slime to use tmux sessions
+let g:syntastic_javascript_checkers = ['jslint']
+let g:cssColorVimDoNotMessMyUpdatetime = 1
+let g:markdown_fenced_languages = [
+  \ 'css',
+  \ 'erb=eruby',
+  \ 'html',
+  \ 'javascript',
+  \ 'js=javascript',
+  \ 'rb=ruby',
+  \ 'ruby'
+\ ]
+
+" Enables JSX filetype plugin for `.js` files
+let g:jsx_ext_required = 0
+
+let g:ale_fixers = {
+  \ 'javascript': ['eslint', 'prettier'],
+  \ 'javascript.jsx': ['eslint', 'prettier'],
+  \ 'css': ['prettier'],
+  \ 'ruby': ['rubocop']
+  \  }
+let g:ale_linters_explicit = 1
+let g:ale_javascript_prettier_use_local_config = 1
+
+

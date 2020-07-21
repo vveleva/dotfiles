@@ -23,7 +23,8 @@ alias diary='v ~/Dropbox/diary/`date +%Y-%m-%d`'
 alias notes='v ~/Dropbox/notes'
 alias wnotes='v ~/Dropbox/work_notes'
 alias taiwan='v ~/Dropbox/taiwan'
-alias addresses='v ~/Dropbox/addresses.txt'
+alias addresses='v ~/Google\ Drive/addresses.txt'
+alias todos='v ~/Google\ Drive/todos'
 
 alias standup='v ~/Google\ Drive/work_standup/`+%Y`'
 
@@ -45,7 +46,8 @@ unwip() {
   fi
 }
 alias wip='git add -A; git commit -m wip'
-alias etl='psql -d production -h localhost -p 5403 -U etl'
+
+alias deploy='g c master; g pull; g c develop; g pull; g l master...develop | grep "Merge pull request" | grep -v "from SnackNation/develop"'
 
 alias locate='mdfind -name'
 alias jumpstat="autojump --stat"
